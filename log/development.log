@@ -6029,3 +6029,1641 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 8619)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-07-20 23:08:21 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.2ms | Allocations: 392)
+Completed 200 OK in 68ms (Views: 26.5ms | ActiveRecord: 1.4ms | Allocations: 27166)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-07-20 23:08:22 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fu26LwmslGm7AurJSs53HICBvA12/YB9KBgxYrw0n6WLHaUB/3PWNjgDZtxPPWEbbvcWvDTcNUv1XAbKUlFDUA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.1ms | Allocations: 4442)
+
+
+Started GET "/" for ::1 at 2020-07-20 23:08:22 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 268)
+Completed 200 OK in 24ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 7422)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:21:04 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 469)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 8960)
+
+
+Started GET "/subjects" for ::1 at 2020-07-21 06:21:05 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 275)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 7581)
+
+
+Started GET "/contact" for ::1 at 2020-07-21 06:21:06 -0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 275)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 7593)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-21 06:21:07 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 640)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3141)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 284)
+Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 13326)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-21 06:21:10 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"GjQrk+lRyvELpTEMFZzWso7CyTU3cvHc/JffBWKkUOHLaM6SF/UpJ3ZLlwYJuhgOD7uga0E6q7pbcGKY43H9Rg==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 255ms (ActiveRecord: 0.3ms | Allocations: 4836)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:21:10 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 164)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 8656)
+
+
+Started GET "/portal" for ::1 at 2020-07-21 06:21:11 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  Rendered pages/portal.html.erb within layouts/application (Duration: 0.2ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 165)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 8830)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-07-21 06:21:13 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p1o/KizFFjQjR4LaLeO/evkh2wiVX5RXyjX/OoagG860YtOvEjf6t1C8AJlBGeLwPIf1wyBMs4+jTUiOCg2vqg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2176)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:21:13 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 266)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 7398)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-21 06:21:15 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 284)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 8519)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-21 06:21:21 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ROQlTyA6hBOWsh6tFjZU7v5XZmypCQ8ym4Vl9IbnTX5n2+7NUmiRlN+3iSQzatyvKUWVAchkw5T6NcED4aQCGw==", "user"=>{"email"=>"test1@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test1@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 252ms (ActiveRecord: 0.1ms | Allocations: 2728)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:21:22 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 13)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 8592)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-07-21 06:21:47 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"14Wcf3jkYmdKarY+AJRwSz6HEe00RrNunCB8c6yLMG51miO/FnpnIKqJkIkT3qKJTFT3pP7R7LBEudPEwoQEwA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2156)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:21:47 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 264)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 7400)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:26:51 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1299)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3249)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="field">
+    <%= f.label :first name %><br />
+    <%= f.text_field :first_name, autocomplete: "email" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:    
+6:       <div class="field">
+7:        <%= f.label :first name %><br />
+8:        <%= f.text_field :first_name, autocomplete: "email" %>
+9:      </div>
+10:    
+11:    
+12:      <div class="field">
+13:        <%= f.label :email %><br />
+14:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+15:      </div>
+16:    
+17:      <div class="field">
+18:        <%= f.label :password %>
+19:        <% if @minimum_password_length %>
+20:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+21:        <% end %><br />
+22:        <%= f.password_field :password, autocomplete: "new-password" %>
+23:      </div>
+24:    
+25:      <div class="field">
+26:        <%= f.label :password_confirmation %><br />
+27:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+28:      </div>
+29:    
+30:      <div class="actions">
+31:        <%= f.submit "Sign up" %>
+32:      </div>
+33:    <% end %>
+34:    
+35:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/devise/registrations/new.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:27:52 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 216)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 535)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2744)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 482)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 11989)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:28:39 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2576)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.7ms | Allocations: 478)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 11738)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:30:08 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 2812)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 478)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 11979)
+
+
+Started POST "/users" for ::1 at 2020-07-21 06:33:55 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"+0e2jz+NT+ATqHIRIUcHH+y2wwOftlLaLp0oTAFFwJR4V7wxYO1djThIVqdjk8DlvCR9zr98LsgOwYNgCD6+AA==", "user"=>{"first_name"=>"Test3", "surname"=>"Run", "email"=>"test3@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :first_name, :surname[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test3@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 569)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 3148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.9ms | Allocations: 478)
+Completed 200 OK in 274ms (Views: 14.9ms | ActiveRecord: 0.3ms | Allocations: 19768)
+
+
+Started GET "/users" for ::1 at 2020-07-21 06:34:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:34:53 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 4323)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 6158)
+
+
+  
+ActionView::Template::Error (undefined method `first_Name' for #<User:0x00005601daeb6d60>
+Did you mean?  first_name?
+               first_name=):
+     5: 
+     6:    <div class="field">
+     7:     <%= f.label :first_name %><br />
+     8:     <%= f.text_field :first_Name, autocomplete: "first_ame" %>
+     9:   </div>
+    10: 
+    11:    <div class="field">
+  
+app/views/devise/registrations/new.html.erb:8
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:35:12 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 478)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms | Allocations: 11960)
+
+
+Started POST "/users" for ::1 at 2020-07-21 06:35:40 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"gB9oC58sIwOeQbtoQN5HKDzaFrKUaIyuJr33IDpoBNQUwiEqMn2tFXGJKc1p/NzabL7Rzo37kX3jNe9WR24P0g==", "user"=>{"first_name"=>"test3", "surname"=>"run", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :first_name, :surname[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 494)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1969)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 274)
+Completed 200 OK in 266ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 16836)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/contact" for ::1 at 2020-07-21 06:53:32 -0700
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:55:50 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NoMethodError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+Started GET "/users/sign_in" for ::1 at 2020-07-21 06:56:13 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 646)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 4765)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 498)
+Completed 200 OK in 44ms (Views: 29.6ms | ActiveRecord: 0.6ms | Allocations: 30011)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:56:16 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 215)
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 284)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 10592)
+
+
+Started POST "/users" for ::1 at 2020-07-21 06:56:38 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"ToI/9t8dbEzDXi+Kuq+BX2TAmRZZTRKUhxWIIBc2oDnaX3bXckziWiyWvS+TjRqtNKReakDeD0dCnZBWajCrPw==", "user"=>{"first_name"=>"test3", "surname"=>"run", "email"=>"test3@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test3@email.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 246)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1731)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 274)
+Completed 200 OK in 267ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 17326)
+
+
+Started POST "/users" for ::1 at 2020-07-21 06:56:50 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"vtESmTS218ew961NZSHsC+hENEXzc4VCyXRa+sOr3Mc9wRgna9bFqpsXifsn9SvxuNaKiNO5+VDpKPHWytCiUw==", "user"=>{"first_name"=>"test3", "surname"=>"run", "email"=>"test3@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test3@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "roles", "first_name", "surname") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "test3@email.com"], ["encrypted_password", "$2a$12$FZgM6GAr8RNuyhhUZIa4seTKT5lHzmeGw4sliSDG2HGJKzhu0Vo1C"], ["created_at", "2020-07-21 13:56:51.216204"], ["updated_at", "2020-07-21 13:56:51.216204"], ["roles", "user"], ["first_name", "test3"], ["surname", "run"]]
+  [1m[35m (57.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 314ms (ActiveRecord: 57.6ms | Allocations: 8342)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:56:51 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 140)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 145)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 9563)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:57:00 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 8587)
+
+
+Started GET "/subjects" for ::1 at 2020-07-21 06:57:01 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 0.4ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.6ms | Allocations: 142)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 8830)
+
+
+Started GET "/contact" for ::1 at 2020-07-21 06:57:02 -0700
+Processing by PagesController#contact as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 142)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 8814)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-07-21 06:57:15 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bRpahMDPDT2ar6BdcgI35Jpxlef6pobqhibCxbzXO8fuClA6n68fULFPhOsw1vAeyuMrKtps+vimemnptaxFUw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 0.2ms | Allocations: 4218)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:57:15 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 266)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 7403)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-21 06:57:18 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 284)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 8523)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 06:57:25 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 1484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 284)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms | Allocations: 8900)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-07-21 06:57:28 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 274)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 8505)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-07-21 06:57:34 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"HQpLWchDGMYRYXT5l91mTcKGiBebR8nmFP6CubY1d1cX5cY6dybBuNix6pkpjeUohaLC8dof3QJuO/beWKu80g==", "user"=>{"email"=>"test3@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test3@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 253ms (ActiveRecord: 0.2ms | Allocations: 3252)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:57:34 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | Allocations: 132)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 8598)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-07-21 06:57:36 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"roE39y0XO/1K1dFOQaJudrkqOUzo6vrotPRZHo1DE0qSnIrPeIAiTeO7C93TfXCW0qgTl0DaCJxIyOpuWruFIQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2180)
+
+
+Started GET "/" for ::1 at 2020-07-21 06:57:36 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 264)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 7400)
+
+
+Started GET "/" for ::1 at 2020-07-21 07:05:22 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 471)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 9673)
+
+
+Started GET "/subjects" for ::1 at 2020-07-21 07:05:23 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 0.2ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 275)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 7578)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:05:24 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1353)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 10114)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autocomplete: "first_ame" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname, autocomplete: "surname" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <% :role => :student  %>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:    
+6:       <div class="field">
+7:        <%= f.label :first_name %><br />
+8:        <%= f.text_field :first_name, autocomplete: "first_ame" %>
+9:      </div>
+10:    
+11:       <div class="field">
+12:        <%= f.label :surname %><br />
+13:        <%= f.text_field :surname, autocomplete: "surname" %>
+14:      </div>
+15:    
+16:    
+17:      <div class="field">
+18:        <%= f.label :email %><br />
+19:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+20:      </div>
+21:    
+22:      <div class="field">
+23:        <%= f.label :password %>
+24:        <% if @minimum_password_length %>
+25:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+26:        <% end %><br />
+27:        <%= f.password_field :password, autocomplete: "new-password" %>
+28:      </div>
+29:    
+30:      <div class="field">
+31:        <%= f.label :password_confirmation %><br />
+32:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+33:      </div>
+34:    
+35:      <% :role => :student  %>
+36:    
+37:      <div class="actions">
+38:        <%= f.submit "Sign up" %>
+39:      </div>
+40:    <% end %>
+41:    
+42:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+Started GET "/subjects" for ::1 at 2020-07-21 07:05:56 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 0.3ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 468)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 8869)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:05:57 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1402)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3092)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autocomplete: "first_ame" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname, autocomplete: "surname" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <% :role = :student  %>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:    
+6:       <div class="field">
+7:        <%= f.label :first_name %><br />
+8:        <%= f.text_field :first_name, autocomplete: "first_ame" %>
+9:      </div>
+10:    
+11:       <div class="field">
+12:        <%= f.label :surname %><br />
+13:        <%= f.text_field :surname, autocomplete: "surname" %>
+14:      </div>
+15:    
+16:    
+17:      <div class="field">
+18:        <%= f.label :email %><br />
+19:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+20:      </div>
+21:    
+22:      <div class="field">
+23:        <%= f.label :password %>
+24:        <% if @minimum_password_length %>
+25:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+26:        <% end %><br />
+27:        <%= f.password_field :password, autocomplete: "new-password" %>
+28:      </div>
+29:    
+30:      <div class="field">
+31:        <%= f.label :password_confirmation %><br />
+32:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+33:      </div>
+34:    
+35:      <% :role = :student  %>
+36:    
+37:      <div class="actions">
+38:        <%= f.submit "Sign up" %>
+39:      </div>
+40:    <% end %>
+41:    
+42:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected '=', expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected '=', expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected '=', expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected '=', expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected '=', expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected '=', expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+Started GET "/subjects" for ::1 at 2020-07-21 07:06:22 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 0.3ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.0ms | Allocations: 468)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 8873)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:06:23 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1402)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3086)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autocomplete: "first_ame" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname, autocomplete: "surname" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <% User.role => :student  %>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:    
+6:       <div class="field">
+7:        <%= f.label :first_name %><br />
+8:        <%= f.text_field :first_name, autocomplete: "first_ame" %>
+9:      </div>
+10:    
+11:       <div class="field">
+12:        <%= f.label :surname %><br />
+13:        <%= f.text_field :surname, autocomplete: "surname" %>
+14:      </div>
+15:    
+16:    
+17:      <div class="field">
+18:        <%= f.label :email %><br />
+19:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+20:      </div>
+21:    
+22:      <div class="field">
+23:        <%= f.label :password %>
+24:        <% if @minimum_password_length %>
+25:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+26:        <% end %><br />
+27:        <%= f.password_field :password, autocomplete: "new-password" %>
+28:      </div>
+29:    
+30:      <div class="field">
+31:        <%= f.label :password_confirmation %><br />
+32:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+33:      </div>
+34:    
+35:      <% User.role => :student  %>
+36:    
+37:      <div class="actions">
+38:        <%= f.submit "Sign up" %>
+39:      </div>
+40:    <% end %>
+41:    
+42:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+app/views/devise/registrations/new.html.erb:35: syntax error, unexpected =>, expecting end
+app/views/devise/registrations/new.html.erb:45: syntax error, unexpected end, expecting end-of-input
+Started GET "/subjects" for ::1 at 2020-07-21 07:06:56 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 0.3ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 468)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8868)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:06:57 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 500)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 284)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 11291)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-07-21 07:33:36 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 286)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.3ms | Allocations: 505)
+Completed 200 OK in 108ms (Views: 98.5ms | ActiveRecord: 0.0ms | Allocations: 18532)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/contact" for ::1 at 2020-07-21 07:40:42 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.5ms | Allocations: 199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.0ms | Allocations: 505)
+Completed 200 OK in 59ms (Views: 48.1ms | ActiveRecord: 0.0ms | Allocations: 18452)
+
+
+Started GET "/subjects" for ::1 at 2020-07-21 07:40:43 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 0.4ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 275)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 7593)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:42:39 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 216)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 549)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 5433)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 478)
+Completed 200 OK in 55ms (Views: 20.4ms | ActiveRecord: 0.7ms | Allocations: 22637)
+
+
+Started GET "/" for ::1 at 2020-07-21 07:45:54 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 468)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 8972)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:45:55 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 94.4ms | Allocations: 5163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 284)
+Completed 200 OK in 105ms (Views: 103.9ms | ActiveRecord: 0.0ms | Allocations: 13501)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:46:36 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3402)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5256)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autocomplete: "First-Name" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname, autocomplete: "Surname" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  </div class = "field" 
+    <%= f.label :roles %><br />
+    <%= f.select :roles, @user.available_roles, {}, {multiple: false} %>
+    <%= .actions = f.submit %>
+ </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:    
+6:       <div class="field">
+7:        <%= f.label :first_name %><br />
+8:        <%= f.text_field :first_name, autocomplete: "First-Name" %>
+9:      </div>
+10:    
+11:       <div class="field">
+12:        <%= f.label :surname %><br />
+13:        <%= f.text_field :surname, autocomplete: "Surname" %>
+14:      </div>
+15:    
+16:    
+17:      <div class="field">
+18:        <%= f.label :email %><br />
+19:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+20:      </div>
+21:    
+22:      <div class="field">
+23:        <%= f.label :password %>
+24:        <% if @minimum_password_length %>
+25:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+26:        <% end %><br />
+27:        <%= f.password_field :password, autocomplete: "new-password" %>
+28:      </div>
+29:    
+30:      <div class="field">
+31:        <%= f.label :password_confirmation %><br />
+32:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+33:      </div>
+34:    
+35:      </div class = "field" 
+36:        <%= f.label :roles %><br />
+37:        <%= f.select :roles, @user.available_roles, {}, {multiple: false} %>
+38:        <%= .actions = f.submit %>
+39:     </div>
+40:    
+41:      <div class="actions">
+42:        <%= f.submit "Sign up" %>
+43:      </div>
+44:    <% end %>
+45:    
+46:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:38: syntax error, unexpected '.'
+app/views/devise/registrations/new.html.erb:38: syntax error, unexpected '.'
+app/views/devise/registrations/new.html.erb:38: syntax error, unexpected '.'
+app/views/devise/registrations/new.html.erb:38: syntax error, unexpected '.'
+app/views/devise/registrations/new.html.erb:38: syntax error, unexpected '.'
+app/views/devise/registrations/new.html.erb:38: syntax error, unexpected '.'
+Started GET "/" for ::1 at 2020-07-21 07:47:27 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 161)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.9ms | Allocations: 468)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 9003)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:47:29 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 207)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 491)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 284)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 11784)
+
+
+Started POST "/users" for ::1 at 2020-07-21 07:47:35 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"bKbX7fDfjat731DNBMmAVlOqEqu9DMWARQyoMYxu+mgKLonEPAvkue2akdHPQv1u2rAsuM9IplFGxPIaUE3cfQ==", "user"=>{"first_name"=>"", "surname"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "roles"=>"student"}, "commit"=>"Create User"}
+[31mUnpermitted parameter: :roles[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 634)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2554)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 274)
+Completed 200 OK in 43ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 13827)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:48:00 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1396)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3254)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autocomplete: "First-Name" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname, autocomplete: "Surname" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  </div class = "field" 
+    <%= f.label :roles %><br />
+    <%= f.select :roles, @:student, {}, {multiple: false} %>
+    <%= actions = f.submit %>
+ </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:    
+6:       <div class="field">
+7:        <%= f.label :first_name %><br />
+8:        <%= f.text_field :first_name, autocomplete: "First-Name" %>
+9:      </div>
+10:    
+11:       <div class="field">
+12:        <%= f.label :surname %><br />
+13:        <%= f.text_field :surname, autocomplete: "Surname" %>
+14:      </div>
+15:    
+16:    
+17:      <div class="field">
+18:        <%= f.label :email %><br />
+19:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+20:      </div>
+21:    
+22:      <div class="field">
+23:        <%= f.label :password %>
+24:        <% if @minimum_password_length %>
+25:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+26:        <% end %><br />
+27:        <%= f.password_field :password, autocomplete: "new-password" %>
+28:      </div>
+29:    
+30:      <div class="field">
+31:        <%= f.label :password_confirmation %><br />
+32:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+33:      </div>
+34:    
+35:      </div class = "field" 
+36:        <%= f.label :roles %><br />
+37:        <%= f.select :roles, @:student, {}, {multiple: false} %>
+38:        <%= actions = f.submit %>
+39:     </div>
+40:    
+41:      <div class="actions">
+42:        <%= f.submit "Sign up" %>
+43:      </div>
+44:    <% end %>
+45:    
+46:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:37: `@:' is not allowed as an instance variable name
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected end-of-input
+app/views/devise/registrations/new.html.erb:37: `@:' is not allowed as an instance variable name
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected end-of-input
+app/views/devise/registrations/new.html.erb:37: `@:' is not allowed as an instance variable name
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected end-of-input
+app/views/devise/registrations/new.html.erb:37: `@:' is not allowed as an instance variable name
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected end-of-input
+app/views/devise/registrations/new.html.erb:37: `@:' is not allowed as an instance variable name
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected end-of-input
+app/views/devise/registrations/new.html.erb:37: `@:' is not allowed as an instance variable name
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected end-of-input
+Started GET "/users" for ::1 at 2020-07-21 07:48:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.3) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.3) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.3) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:48:18 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3588)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5444)
+
+
+  
+ActionView::Template::Error (undefined method `first' for :student:Symbol):
+    34: 
+    35:   </div class = "field" 
+    36:     <%= f.label :roles %><br />
+    37:     <%= f.select :roles, :student, {}, {multiple: false} %>
+    38:     <%= actions = f.submit %>
+    39:  </div>
+    40: 
+  
+app/views/devise/registrations/new.html.erb:37
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:48:47 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 794.6ms | Allocations: 433191)
+Completed 500 Internal Server Error in 799ms (ActiveRecord: 0.0ms | Allocations: 435058)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student' for #<#<Class:0x00007fd9a860b358>:0x00007fd9a86097d8>):
+    34: 
+    35:   </div class = "field" 
+    36:     <%= f.label :roles %><br />
+    37:     <%= f.select :roles, student, {}, {multiple: false} %>
+    38:     <%= actions = f.submit %>
+    39:  </div>
+    40: 
+  
+app/views/devise/registrations/new.html.erb:37
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:49:16 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3935)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 5792)
+
+
+  
+ActionView::Template::Error (undefined method `student' for [:student, :tutor, :user]:Array):
+    34: 
+    35:   </div class = "field" 
+    36:     <%= f.label :roles %><br />
+    37:     <%= f.select :roles, @user.available_roles.student, {}, {multiple: false} %>
+    38:     <%= actions = f.submit %>
+    39:  </div>
+    40: 
+  
+app/views/devise/registrations/new.html.erb:37
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:49:37 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3940)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5797)
+
+
+  
+ActionView::Template::Error (undefined method `student' for [:user]:Array):
+    34: 
+    35:   </div class = "field" 
+    36:     <%= f.label :roles %><br />
+    37:     <%= f.select :roles, @user.roles.student, {}, {multiple: false} %>
+    38:     <%= actions = f.submit %>
+    39:  </div>
+    40: 
+  
+app/views/devise/registrations/new.html.erb:37
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:52:00 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1433)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3291)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autocomplete: "First-Name" %>
+  </div>
+
+   <div class="field">
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname, autocomplete: "Surname" %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  </div class = "field" 
+    <%= f.label :roles %><br />
+    <%= f.select :roles, user.role => :student, {}, {multiple: false} %>
+    <%= actions = f.submit %>
+ </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:    
+6:       <div class="field">
+7:        <%= f.label :first_name %><br />
+8:        <%= f.text_field :first_name, autocomplete: "First-Name" %>
+9:      </div>
+10:    
+11:       <div class="field">
+12:        <%= f.label :surname %><br />
+13:        <%= f.text_field :surname, autocomplete: "Surname" %>
+14:      </div>
+15:    
+16:    
+17:      <div class="field">
+18:        <%= f.label :email %><br />
+19:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+20:      </div>
+21:    
+22:      <div class="field">
+23:        <%= f.label :password %>
+24:        <% if @minimum_password_length %>
+25:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+26:        <% end %><br />
+27:        <%= f.password_field :password, autocomplete: "new-password" %>
+28:      </div>
+29:    
+30:      <div class="field">
+31:        <%= f.label :password_confirmation %><br />
+32:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+33:      </div>
+34:    
+35:      </div class = "field" 
+36:        <%= f.label :roles %><br />
+37:        <%= f.select :roles, user.role => :student, {}, {multiple: false} %>
+38:        <%= actions = f.submit %>
+39:     </div>
+40:    
+41:      <div class="actions">
+42:        <%= f.submit "Sign up" %>
+43:      </div>
+44:    <% end %>
+45:    
+46:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected ',', expecting =>
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected ',', expecting =>
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected ',', expecting =>
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected ',', expecting =>
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected ',', expecting =>
+app/views/devise/registrations/new.html.erb:37: syntax error, unexpected ',', expecting =>
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:53:03 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3602)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 5459)
+
+
+  
+ActionView::Template::Error (undefined method `first' for :student:Symbol):
+    35:   </div class = "field" 
+    36:    <% @custom_role = :student %>
+    37:     <%= f.label :roles %><br />
+    38:     <%= f.select :roles, @custom_role, {}, {multiple: false} %>
+    39:     <%= actions = f.submit %>
+    40:  </div>
+    41: 
+  
+app/views/devise/registrations/new.html.erb:38
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:54:21 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3934)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 5791)
+
+
+  
+ActionView::Template::Error (undefined method `student' for [:student, :tutor, :user]:Array):
+    34: 
+    35:   </div class = "field" 
+    36:     <%= f.label :roles %><br />
+    37:     <%= f.select :roles, @user.available_roles.student, {}, {multiple: false} %>
+    38:     <%= actions = f.submit %>
+    39:  </div>
+    40: 
+  
+app/views/devise/registrations/new.html.erb:37
+app/views/devise/registrations/new.html.erb:3
+Started GET "/" for ::1 at 2020-07-21 07:54:36 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.7ms | Allocations: 468)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 8953)
+
+
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:54:38 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 206)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3933)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 5612)
+
+
+  
+ActionView::Template::Error (undefined method `student' for [:student, :tutor, :user]:Array):
+    34: 
+    35:   </div class = "field" 
+    36:     <%= f.label :roles %><br />
+    37:     <%= f.select :roles, @user.available_roles.student, {}, {multiple: false} %>
+    38:     <%= actions = f.submit %>
+    39:  </div>
+    40: 
+  
+app/views/devise/registrations/new.html.erb:37
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for ::1 at 2020-07-21 07:54:51 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 206)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 490)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 478)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 12463)
+
+
