@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  validates_presence_of :first_name , :surname
   ############################################################################################
   ## PeterGate Roles                                                                        ##
   ## The :user role is added by default and shouldn't be included in this list.             ##

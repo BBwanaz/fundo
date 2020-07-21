@@ -1,2 +1,5 @@
 <h1>Home</h1>
 <hr>
+<% if current_user %>
+<p><%= "Hi ," + current_user.first_name  %></p>
+<% end %>
