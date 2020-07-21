@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   get 'subjects' , to: "pages#subjects"
   get 'contact' , to: "pages#contact"
   get 'portal' , to: "pages#portal"
