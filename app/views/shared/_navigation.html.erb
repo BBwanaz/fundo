@@ -5,5 +5,6 @@
   <div><%= link_to "Portal", portal_path  if logged_in?(:tutor) %> </div>
   <div><%= link_to "Login" , new_user_session_path if !current_user %></div>
   <div><%= link_to "Sign up" , new_user_registration_path if !current_user%></div>
+  <div><%= link_to "My Profile" , profile_path if current_user %></div>
   <div><%= link_to "Logout" , destroy_user_session_path, method: :delete if current_user %></div>
  </div>

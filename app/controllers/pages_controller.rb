@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-access all: [:home, :subjects, :contact], student: {except: [:portal]}, tutor: [:portal], root_admin: :all
+access all: [:home, :subjects, :contact], student: [:profile, {except: [:portal]}], tutor: [:portal, :profile], root_admin: :all
   def home
   end
 
@@ -10,5 +10,8 @@ access all: [:home, :subjects, :contact], student: {except: [:portal]}, tutor: [
   end
 
   def portal
+  end
+
+  def profile
   end
 end
