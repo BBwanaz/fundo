@@ -10,6 +10,7 @@ access all: [:home, :subjects, :contact], student: [:profile, {except: [:portal]
   end
 
   def portal
+  	@queries = Query.all
   end
 
   def profile

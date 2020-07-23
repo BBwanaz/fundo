@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @query.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @query.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @query.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @query.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @query.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @query.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @query.image %>
+</p>
+
+<%= link_to 'Edit', edit_query_path(@query) %> |
+<%= link_to 'Back', portal_path if logged_in?(:tutor)%>
