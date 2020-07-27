@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+ <div>
+    <label for="subject_id">Select Subject:</label>
+    <%= form.collection_select :subject_id, Subject.all, :id, :title, prompt: true%>
+  </div>
+
   <div class="field">
     <%= form.label :paper %>
     <%= form.number_field :paper %>
