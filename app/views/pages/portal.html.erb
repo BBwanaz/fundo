@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Subject</th>
       <th>Paper</th>
       <th>Level</th>
       <th>Year</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @queries.each do |query| %>
       <tr>
+        <td><%= query.subject.title%></td>
         <td><%= query.paper %></td>
         <td><%= query.level %></td>
         <td><%= query.year %></td>
