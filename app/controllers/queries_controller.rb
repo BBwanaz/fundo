@@ -1,6 +1,6 @@
 class QueriesController < ApplicationController
   before_action :set_query, only: [:show, :edit, :update, :destroy]
-  access  student: [:new,:show,:edit,:update, :create, {except: [ :index,   :destroy, :set_query, :query_params]}], tutor: [:show, :index, :edit, :update, :destroy, :set_query, :query_params]
+  access  student: [:new,:create, {except: [ :index, :show, :edit, :update,  :destroy, :set_query, :query_params]}], tutor: [:show, :index, :edit, :update, :destroy, :set_query, :query_params]
 
   # GET /queries
   # Queries index is in pages and is called Portal
@@ -11,6 +11,8 @@ class QueriesController < ApplicationController
   # GET /queries/new
   def new
     @query = Query.new
+    @query.build_subject
+  
   end
 
   # GET /queries/1/edit
@@ -20,9 +22,9 @@ class QueriesController < ApplicationController
   # POST /queries
   def create
     @query = Query.new(query_params)
-
+  
     if @query.save
-      redirect_to @query, notice: 'Query was successfully created.'
+      redirect_to profile_path, notice: 'Query was successfully created.'
     else
       render :new
     end
@@ -51,6 +53,6 @@ class QueriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def query_params
-      params.require(:query).permit(:paper, :level, :year, :session, :board, :description, :image)
+      params.require(:query).permit(:paper, :level, :year, :session, :board, :description, :image, :subject_id)
     end
 end

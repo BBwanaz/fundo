@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_23_121935) do
+ActiveRecord::Schema.define(version: 2020_07_26_181735) do
 
   create_table "queries", force: :cascade do |t|
     t.integer "paper"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2020_07_23_121935) do
     t.text "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "subject_id", null: false
+    t.index ["subject_id"], name: "index_queries_on_subject_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -34,6 +36,12 @@ ActiveRecord::Schema.define(version: 2020_07_23_121935) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_students_on_email", unique: true
     t.index ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tutors", force: :cascade do |t|
@@ -63,4 +71,5 @@ ActiveRecord::Schema.define(version: 2020_07_23_121935) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "queries", "subjects"
 end
