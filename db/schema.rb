@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_26_181735) do
+ActiveRecord::Schema.define(version: 2020_07_27_193727) do
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "name"
+    t.string "surname"
+    t.string "education"
+    t.text "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "queries", force: :cascade do |t|
     t.integer "paper"
@@ -65,11 +74,12 @@ ActiveRecord::Schema.define(version: 2020_07_26_181735) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "roles"
-    t.string "first_name"
-    t.string "surname"
+    t.integer "profile_id", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["profile_id"], name: "index_users_on_profile_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "queries", "subjects"
+  add_foreign_key "users", "profiles"
 end

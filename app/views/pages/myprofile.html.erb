@@ -1,0 +1,4 @@
+<h1>My Profile</h1>
+
+<p> Name: <%= current_user.profile.name %></p>
+<p> <%= link_to 'Edit', edit_profile_path(current_user.profile) %></p>
