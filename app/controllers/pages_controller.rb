@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-access all: [:home, :subjects, :contact], student: [:profile, {except: [:portal]}], tutor: [:portal, :profile], root_admin: :all
+access all: [:home, :subjects, :contact], student: [:myprofile, {except: [:portal]}], tutor: [:portal, :myprofile], root_admin: :all
   def home
   end
 
@@ -13,6 +13,7 @@ access all: [:home, :subjects, :contact], student: [:profile, {except: [:portal]
   	@queries = Query.all
   end
 
-  def profile
+  def myprofile
   end
+
 end

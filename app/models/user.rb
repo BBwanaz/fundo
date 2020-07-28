@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  validates_presence_of :first_name , :surname
+  belongs_to :profile
+  accepts_nested_attributes_for :profile
   ############################################################################################
   ## PeterGate Roles                                                                        ##
   ## The :user role is added by default and shouldn't be included in this list.             ##
@@ -13,4 +14,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+include RolesUpdate
+include ProfileBuilder
+
 end
+
+
+
