@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-before_action :set_profile, only: [:show, :edit, :update, :destroy]
+before_action :set_profile, only: [:show, :update, :destroy]
  access all: [:show],  student: [:show, :edit, :update, :set_profile, :profile_params], tutor: [:show, :edit, :update, :set_profile, :profile_params]
 
 def show

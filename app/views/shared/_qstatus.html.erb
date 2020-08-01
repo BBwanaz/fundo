@@ -1,0 +1,6 @@
+    <%if query.active? %>
+    <%= link_to query.status, update_status_query_path(query) %>
+    <% else %>
+    <%= link_to 'Give_up', update_status_query_path(query) if query.profile_id == @current_user.profile_id %>
+    <%= "Taken".html_safe if query.profile_id != @current_user.profile_id %>
+    <% end %>
