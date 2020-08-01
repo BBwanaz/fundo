@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_01_004736) do
+ActiveRecord::Schema.define(version: 2020_08_01_074243) do
 
   create_table "profiles", force: :cascade do |t|
     t.string "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2020_08_01_004736) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "subject_id", null: false
     t.integer "profile_id", null: false
+    t.integer "status", default: 0
     t.index ["profile_id"], name: "index_queries_on_profile_id"
     t.index ["subject_id"], name: "index_queries_on_subject_id"
   end
