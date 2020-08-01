@@ -12,7 +12,7 @@ class QueriesController < ApplicationController
   def new
     @query = Query.new
     @query.build_subject
-  
+    @query.build_profile
   end
 
   # GET /queries/1/edit
@@ -22,9 +22,10 @@ class QueriesController < ApplicationController
   # POST /queries
   def create
     @query = Query.new(query_params)
+    @query.profile_id = current_user.profile_id
   
     if @query.save
-      redirect_to profile_path, notice: 'Query was successfully created.'
+      redirect_to my_profile_path, notice: 'Query was successfully created.'
     else
       render :new
     end
@@ -53,6 +54,6 @@ class QueriesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def query_params
-      params.require(:query).permit(:paper, :level, :year, :session, :board, :description, :image, :subject_id)
+      params.require(:query).permit(:paper, :level, :year, :session, :board, :description, :image, :subject_id, :profile_id)
     end
 end
