@@ -40,7 +40,7 @@
   <%= image_tag @query.image %>
 </p>
 
-<h3> Sudent:</h3> <%= @query.profile.name %>
+<h3> Sudent: <%= link_to "#{@query.profile.name}", @query.profile%> </h3>
 
 <%= link_to 'Edit', edit_query_path(@query) %> |
 <%= link_to 'Back', portal_path %>
