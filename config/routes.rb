@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 	
-  resources :queries
+  resources :queries do
+    member do
+      get :update_status
+    end
+  end
+
   resources :profiles
   devise_for :users, controllers: { registrations: 'users/registrations' } 
   get 'subjects' , to: "pages#subjects"
