@@ -41,6 +41,13 @@
   <%= image_tag @query.image %>
 </p>
 
+<p>
+  <strong> Creator: </strong>
+  <%@creator = Profile.find(@query.creator) %>
+  <%= link_to @creator.name, @creator %>
+  
+</p>
+
 <h3> Owner: <%= link_to "#{@query.profile.name}", @query.profile%> </h3>
 
 <%= link_to 'Edit', edit_query_path(@query) if @query.profile_id == current_user.profile_id %> |

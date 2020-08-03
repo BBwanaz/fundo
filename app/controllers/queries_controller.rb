@@ -33,6 +33,7 @@ class QueriesController < ApplicationController
   def create
     @query = Query.new(query_params)
     @query.profile_id = current_user.profile_id
+    @query.creator = @current_user.profile_id
   
     if @query.save
       redirect_to my_profile_path, notice: 'Query was successfully created.'
