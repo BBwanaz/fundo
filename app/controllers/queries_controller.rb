@@ -5,6 +5,7 @@ class QueriesController < ApplicationController
   # GET /queries
   # Queries index is in pages and is called Portal
   # GET /queries/1
+  # Creator is different from Owner
   def show
     @creator = Profile.find(@query.creator)
   end
