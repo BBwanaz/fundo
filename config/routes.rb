@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :queries do
     member do
       get :update_status
+      get :set_creator
     end
   end
 

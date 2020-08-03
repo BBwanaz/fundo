@@ -1,11 +1,12 @@
 class QueriesController < ApplicationController
-  before_action :set_query, only: [:show, :edit, :update, :destroy, :update_status]
-  access  student: [:new,:create, {except: [ :index, :show, :edit, :update,  :destroy, :set_query, :query_params]}], tutor: [:update_status,:show, :index, :edit, :update, :destroy, :set_query, :query_params]
+  before_action :set_query, only: [:show, :edit, :update, :destroy, :update_status, :set_creator]
+  access  student: [:new,:create, {except: [:show, :edit, :update,  :destroy, :set_query, :query_params]}], tutor: [:update_status,:show, :index, :edit, :update, :destroy, :set_query, :query_params]
 
   # GET /queries
   # Queries index is in pages and is called Portal
   # GET /queries/1
   def show
+    @creator = Profile.find(@query.creator)
   end
 
   # GET /queries/new
