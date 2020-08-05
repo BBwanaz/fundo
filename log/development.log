@@ -44932,3 +44932,527 @@ Processing by LessonsController#show as HTML
 Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.1ms | Allocations: 8508)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-08-04 10:24:54 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 320)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.9ms | Allocations: 610)
+Completed 200 OK in 58ms (Views: 50.2ms | ActiveRecord: 0.0ms | Allocations: 25102)
+
+
+Started GET "/subjects" for ::1 at 2020-08-04 10:24:57 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 16.2ms | Allocations: 9304)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 333)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.8ms | Allocations: 17407)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 10:24:58 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 347)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 9840)
+
+
+Started GET "/" for ::1 at 2020-08-04 10:42:19 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 345)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 8012)
+
+
+Started GET "/contact" for ::1 at 2020-08-04 10:42:21 -0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 0.2ms | Allocations: 81)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 346)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 8187)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-04 10:42:24 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 450)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 355)
+Completed 200 OK in 28ms (Views: 16.1ms | ActiveRecord: 0.6ms | Allocations: 20857)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-04 10:42:26 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"J1UfO1jANIH0gSdsioC2mOlJ+SsY4QuzsC7VnkjLHRv2ZvPuZUXwXyuGr7h1Yk6woKCdqt8BuD9BtvJPpiKLIA==", "user"=>{"email"=>"tutor@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tutor@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 254ms (ActiveRecord: 0.2ms | Allocations: 4961)
+
+
+Started GET "/" for ::1 at 2020-08-04 10:42:26 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 204)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 9239)
+
+
+Started GET "/portal" for ::1 at 2020-08-04 10:42:28 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.4ms | Allocations: 197)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 48.6ms | Allocations: 26151)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 62ms (Views: 55.6ms | ActiveRecord: 2.0ms | Allocations: 36397)
+
+
+Started GET "/queries/1" for ::1 at 2020-08-04 10:42:30 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuery Load (0.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2040)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 187)
+Completed 200 OK in 24ms (Views: 15.1ms | ActiveRecord: 0.7ms | Allocations: 13263)
+
+
+Started GET "/portal" for ::1 at 2020-08-04 10:42:35 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 10)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.5ms | Allocations: 13005)
+
+
+Started GET "/queries/2" for ::1 at 2020-08-04 10:42:36 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 11874)
+
+
+Started GET "/portal" for ::1 at 2020-08-04 10:42:40 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 10)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3810)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.5ms | Allocations: 12977)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-08-04 23:16:02 -0700
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.0ms | Allocations: 3298)
+Started GET "/" for ::1 at 2020-08-04 23:16:07 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+Started GET "/" for ::1 at 2020-08-04 23:16:11 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 36.7ms | Allocations: 678)
+Completed 200 OK in 3847ms (Views: 3836.9ms | ActiveRecord: 0.2ms | Allocations: 121192)
+
+
+  Rendered shared/_navigation.html.erb (Duration: 39.0ms | Allocations: 1515)
+  Rendered shared/_navigation.html.erb (Duration: 39.2ms | Allocations: 1700)
+Completed 200 OK in 8899ms (Views: 8771.4ms | ActiveRecord: 1.0ms | Allocations: 192360)
+
+
+Completed 200 OK in 300ms (Views: 297.6ms | ActiveRecord: 0.2ms | Allocations: 25272)
+
+
+Started GET "/subjects" for ::1 at 2020-08-04 23:16:13 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (17.5ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 61.9ms | Allocations: 9051)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 189)
+Completed 200 OK in 74ms (Views: 53.5ms | ActiveRecord: 18.4ms | Allocations: 19065)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:16:14 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 182.7ms | Allocations: 101581)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.3ms | Allocations: 105003)
+
+
+  
+ActionView::Template::Error (undefined method `videojs_rails' for #<#<Class:0x00007fad34b363f0>:0x00007fad34b34988>
+Did you mean?  video_url):
+    1: 
+    2: 
+    3: <%= videojs_rails sources: {webm: "https://lamberta.github.io/html5-animation/examples/ch04/assets/movieclip.mp4"}, setup: "{}", controls: false, width:"400" %>
+  
+app/views/lessons/show.html.erb:3
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:16:28 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.7ms | Allocations: 428)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 12122)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:16:40 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 427)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 12019)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:16:53 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 427)
+Completed 200 OK in 24ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 12044)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:17:22 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.7ms | Allocations: 427)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 12029)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:17:58 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 191)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.7ms | Allocations: 427)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 0.2ms | Allocations: 12050)
+
+
+Started GET "/" for ::1 at 2020-08-04 23:25:11 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 13.3ms | Allocations: 129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 201)
+Completed 200 OK in 72ms (Views: 69.5ms | ActiveRecord: 0.2ms | Allocations: 10694)
+
+
+Started GET "/portal" for ::1 at 2020-08-04 23:25:12 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (14.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.5ms | Allocations: 191)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 110.1ms | Allocations: 26247)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 322ms (Views: 104.2ms | ActiveRecord: 16.3ms | Allocations: 38816)
+
+
+Started GET "/queries/1" for ::1 at 2020-08-04 23:25:15 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mQuery Load (0.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 14.4ms | Allocations: 2041)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 187)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 0.6ms | Allocations: 13914)
+
+
+Started GET "/portal" for ::1 at 2020-08-04 23:25:17 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.0ms | Allocations: 10)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3817)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.4ms | Allocations: 13684)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-04 23:25:18 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AnYoHl/8/MJ9HNaf4nIVSFEqz7gs7PyLlS3T+Uh9kwuT0M5xf0o5YzcxT/zuNOYgaYepFuxTR5FxPI2fsI8IVA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms (ActiveRecord: 0.1ms | Allocations: 4658)
+
+
+Started GET "/" for ::1 at 2020-08-04 23:25:18 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 339)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 8705)
+
+
+Started GET "/subjects" for ::1 at 2020-08-04 23:25:19 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (11.0ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 26.4ms | Allocations: 898)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 333)
+Completed 200 OK in 41ms (Views: 28.7ms | ActiveRecord: 11.0ms | Allocations: 9673)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:25:21 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 85)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 346)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 9293)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:31:07 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 190)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 80.7ms | Allocations: 571)
+Completed 200 OK in 120ms (Views: 117.9ms | ActiveRecord: 0.1ms | Allocations: 10861)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-08-04 23:36:54 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (14.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 308)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.2ms | Allocations: 610)
+Completed 200 OK in 302ms (Views: 241.2ms | ActiveRecord: 0.0ms | Allocations: 29045)
+
+
+Started GET "/" for ::1 at 2020-08-04 23:36:55 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 335)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 8767)
+
+
+Started GET "/subjects" for ::1 at 2020-08-04 23:36:56 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 14.0ms | Allocations: 9263)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 333)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.8ms | Allocations: 18137)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-04 23:36:57 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 199)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 347)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 10649)
+
+
