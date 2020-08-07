@@ -46554,3 +46554,1078 @@ Processing by PagesController#myprofile as HTML
 Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 11723)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "lesson"[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLessons (20200807232713)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "lessons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "paper" integer, "level" varchar, "year" integer, "session" varchar, "board" varchar, "description" text, "video" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ffc4753ede"
+FOREIGN KEY ("subject_id")
+  REFERENCES "subjects" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (84.2ms)[0m  [1m[35mDROP TABLE "lessons"[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateLessons (20200807232713)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "lessons" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer NOT NULL, "paper" integer, "level" varchar, "year" integer, "session" varchar, "board" varchar, "description" text, "video" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_ffc4753ede"
+FOREIGN KEY ("subject_id")
+  REFERENCES "subjects" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_lessons_on_subject_id" ON "lessons" ("subject_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200807232713"]]
+  [1m[35m (110.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/subjects" for ::1 at 2020-08-07 16:30:11 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 44.1ms | Allocations: 3910)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.9ms | Allocations: 437)
+Completed 200 OK in 121ms (Views: 101.2ms | ActiveRecord: 1.3ms | Allocations: 41539)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:30:13 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.9ms | Allocations: 795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.0ms | Allocations: 181)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 0.2ms | Allocations: 11513)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:30:18 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 2.9ms | Allocations: 791)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 0.2ms | Allocations: 11514)
+
+
+Started GET "/lessons/new" for ::1 at 2020-08-07 16:30:28 -0700
+Processing by LessonsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/new.html.erb within layouts/application
+  Rendered lessons/_form.html.erb (Duration: 5.9ms | Allocations: 5111)
+  Rendered lessons/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 5466)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 31ms (Views: 16.8ms | ActiveRecord: 0.1ms | Allocations: 23765)
+
+
+Started POST "/lessons" for ::1 at 2020-08-07 16:30:40 -0700
+Processing by LessonsController#create as HTML
+  Parameters: {"authenticity_token"=>"XjKpdB89p6rgEJrJpOO2+tu1XuXk1+rH0lgxUtGRutDShuKn/Qkk1SgMNk6acY+VdVdYhDhGYs7eAm7pgKB/uQ==", "lesson"=>{"subject_id"=>"", "paper"=>"", "level"=>"", "year"=>"", "session"=>"", "board"=>"", "description"=>"", "video"=>#<ActionDispatch::Http::UploadedFile:0x000055e65f646838 @tempfile=#<Tempfile:/tmp/RackMultipart20200807-2648-1n7t1e3.mp4>, @original_filename="Pexels Videos 2764117.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"lesson[video]\"; filename=\"Pexels Videos 2764117.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Create Lesson"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/new.html.erb within layouts/application
+  Rendered lessons/_form.html.erb (Duration: 2.4ms | Allocations: 2047)
+  Rendered lessons/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2134)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 37ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 17365)
+
+
+Started POST "/lessons" for ::1 at 2020-08-07 16:30:54 -0700
+Processing by LessonsController#create as HTML
+  Parameters: {"authenticity_token"=>"Uz1njCisw06mdYpX62Ony8VBDGfe9p7mzkcngbGztMHfiSxfyphAMW5pJtDV8Z6ka6MKBgJnFu/CHXg64IJxqA==", "lesson"=>{"subject_id"=>"Physics", "paper"=>"", "level"=>"", "year"=>"", "session"=>"", "board"=>"", "description"=>"", "video"=>#<ActionDispatch::Http::UploadedFile:0x000055e65c038340 @tempfile=#<Tempfile:/tmp/RackMultipart20200807-2648-3e1482.mp4>, @original_filename="Pexels Videos 2764117.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"lesson[video]\"; filename=\"Pexels Videos 2764117.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Create Lesson"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lessons_controller.rb:27:in `create'
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:27:in `create'
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/lessons_controller.rb:27:in `create'
+  Rendering lessons/new.html.erb within layouts/application
+  Rendered lessons/_form.html.erb (Duration: 2.7ms | Allocations: 2032)
+  Rendered lessons/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 38ms (Views: 12.5ms | ActiveRecord: 0.7ms | Allocations: 18019)
+
+
+Started GET "/lessons" for ::1 at 2020-08-07 16:31:56 -0700
+Processing by LessonsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/lessons/index.html.erb:21
+  Rendered lessons/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1046)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.7ms | Allocations: 418)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 13222)
+
+
+Started GET "/lessons/new" for ::1 at 2020-08-07 16:32:01 -0700
+Processing by LessonsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/lessons/_form.html.erb:16
+  Rendered lessons/_form.html.erb (Duration: 12.4ms | Allocations: 5456)
+  Rendered lessons/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 5801)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.3ms | Allocations: 16659)
+
+
+Started POST "/lessons" for ::1 at 2020-08-07 16:32:09 -0700
+Processing by LessonsController#create as HTML
+  Parameters: {"authenticity_token"=>"L8wrljhSRQgY8SL+p63DuBmb+DjPpAcT/5ig8suVYNS29BTOpLlafv1uN8HrscIUpBLXGETTtKgLrWW5oGzvBA==", "lesson"=>{"subject_id"=>"1", "paper"=>"", "level"=>"", "year"=>"", "session"=>"", "board"=>"", "description"=>"", "video"=>#<ActionDispatch::Http::UploadedFile:0x000055e65f645e88 @tempfile=#<Tempfile:/tmp/RackMultipart20200807-2648-7hcme5.mp4>, @original_filename="Pexels Videos 2764117.mp4", @content_type="video/mp4", @headers="Content-Disposition: form-data; name=\"lesson[video]\"; filename=\"Pexels Videos 2764117.mp4\"\r\nContent-Type: video/mp4\r\n">}, "commit"=>"Create Lesson"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/lessons_controller.rb:27:in `create'
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:27:in `create'
+  [1m[36mLesson Create (0.3ms)[0m  [1m[32mINSERT INTO "lessons" ("subject_id", "level", "session", "board", "description", "video", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["subject_id", 1], ["level", ""], ["session", ""], ["board", ""], ["description", ""], ["video", "Pexels_Videos_2764117.mp4"], ["created_at", "2020-08-07 23:32:09.368470"], ["updated_at", "2020-08-07 23:32:09.368470"]]
+  ↳ app/controllers/lessons_controller.rb:27:in `create'
+[Aws::S3::Client 200 0.319159 0 retries] create_multipart_upload(acl:"public-read",bucket:"fundoapp",cache_control:"max-age=604800",content_type:"video/mp4",expires:2020-08-14 23:32:09 UTC,key:"uploads/Pexels_Videos_2764117.mp4")  
+
+[Aws::S3::Client 200 2.157213 0 retries] upload_part(body:#<Aws::S3::FilePart:0x000055e65e265378 @source="/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4", @first_byte=26214400, @last_byte=29180422, @size=2966022, @file=#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4>, @position=29180422>,bucket:"fundoapp",key:"uploads/Pexels_Videos_2764117.mp4",upload_id:"7eXu59QUZ7B47smW7C_uLe9bRYi2TC4fDIpJxgL0rUlBMrqMDif4tj6DHIFN1nSDu7jNNL6qGIvGfnq04ZMxYI_wv75cDNgwBNNOj_NouIB33Jzz_hTc056Owbfphud8",part_number:6)  
+
+[Aws::S3::Client 200 2.659461 0 retries] upload_part(body:#<Aws::S3::FilePart:0x000055e65e265940 @source="/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4", @first_byte=20971520, @last_byte=26214400, @size=5242880, @file=#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4>, @position=26214400>,bucket:"fundoapp",key:"uploads/Pexels_Videos_2764117.mp4",upload_id:"7eXu59QUZ7B47smW7C_uLe9bRYi2TC4fDIpJxgL0rUlBMrqMDif4tj6DHIFN1nSDu7jNNL6qGIvGfnq04ZMxYI_wv75cDNgwBNNOj_NouIB33Jzz_hTc056Owbfphud8",part_number:5)  
+
+[Aws::S3::Client 200 3.035848 0 retries] upload_part(body:#<Aws::S3::FilePart:0x000055e65e265df0 @source="/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4", @first_byte=15728640, @last_byte=20971520, @size=5242880, @file=#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4>, @position=20971520>,bucket:"fundoapp",key:"uploads/Pexels_Videos_2764117.mp4",upload_id:"7eXu59QUZ7B47smW7C_uLe9bRYi2TC4fDIpJxgL0rUlBMrqMDif4tj6DHIFN1nSDu7jNNL6qGIvGfnq04ZMxYI_wv75cDNgwBNNOj_NouIB33Jzz_hTc056Owbfphud8",part_number:4)  
+
+[Aws::S3::Client 200 3.056512 0 retries] upload_part(body:#<Aws::S3::FilePart:0x000055e65e266430 @source="/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4", @first_byte=10485760, @last_byte=15728640, @size=5242880, @file=#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4>, @position=15728640>,bucket:"fundoapp",key:"uploads/Pexels_Videos_2764117.mp4",upload_id:"7eXu59QUZ7B47smW7C_uLe9bRYi2TC4fDIpJxgL0rUlBMrqMDif4tj6DHIFN1nSDu7jNNL6qGIvGfnq04ZMxYI_wv75cDNgwBNNOj_NouIB33Jzz_hTc056Owbfphud8",part_number:3)  
+
+[Aws::S3::Client 200 3.076187 0 retries] upload_part(body:#<Aws::S3::FilePart:0x000055e65e267970 @source="/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4", @first_byte=0, @last_byte=5242880, @size=5242880, @file=#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4>, @position=5242880>,bucket:"fundoapp",key:"uploads/Pexels_Videos_2764117.mp4",upload_id:"7eXu59QUZ7B47smW7C_uLe9bRYi2TC4fDIpJxgL0rUlBMrqMDif4tj6DHIFN1nSDu7jNNL6qGIvGfnq04ZMxYI_wv75cDNgwBNNOj_NouIB33Jzz_hTc056Owbfphud8",part_number:1)  
+
+[Aws::S3::Client 200 3.078689 0 retries] upload_part(body:#<Aws::S3::FilePart:0x000055e65e2673a8 @source="/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4", @first_byte=5242880, @last_byte=10485760, @size=5242880, @file=#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1596843129-2648-0003-3929/Pexels_Videos_2764117.mp4>, @position=10485760>,bucket:"fundoapp",key:"uploads/Pexels_Videos_2764117.mp4",upload_id:"7eXu59QUZ7B47smW7C_uLe9bRYi2TC4fDIpJxgL0rUlBMrqMDif4tj6DHIFN1nSDu7jNNL6qGIvGfnq04ZMxYI_wv75cDNgwBNNOj_NouIB33Jzz_hTc056Owbfphud8",part_number:2)  
+
+[Aws::S3::Client 200 0.241851 0 retries] complete_multipart_upload(bucket:"fundoapp",key:"uploads/Pexels_Videos_2764117.mp4",upload_id:"7eXu59QUZ7B47smW7C_uLe9bRYi2TC4fDIpJxgL0rUlBMrqMDif4tj6DHIFN1nSDu7jNNL6qGIvGfnq04ZMxYI_wv75cDNgwBNNOj_NouIB33Jzz_hTc056Owbfphud8",multipart_upload:{parts:[{etag:"\"bb18bb022e8f9507b2a46330c68468cd\"",part_number:1},{etag:"\"017db2b5a002cf1ab357ec608f3290ed\"",part_number:2},{etag:"\"fcb9236dbdf154d4ad0e1bfa28f91803\"",part_number:3},{etag:"\"16fb76b6af72f2888be50cef571f733c\"",part_number:4},{etag:"\"e6a6416574cbec5fbf9b8a7cda505dd8\"",part_number:5},{etag:"\"2d20776816b17c6b1da136d5da3b3c36\"",part_number:6}]})  
+
+  [1m[35m (65.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/lessons_controller.rb:27:in `create'
+Redirected to http://localhost:3000/lessons/1
+Completed 302 Found in 3743ms (ActiveRecord: 66.2ms | Allocations: 50216)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:32:13 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 639)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 189)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 12182)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:32:51 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.7ms | Allocations: 869)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 2.8ms | Allocations: 189)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 12245)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:32:52 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 189)
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 11560)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:33:51 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 9.7ms | Allocations: 5486)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms | Allocations: 8853)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%=video_player @lesson.video.url , controls true %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Subject:</strong>
+5:      <%= @lesson.subject_id %>
+6:    </p>
+7:    
+8:    <p>
+9:      <strong>Paper:</strong>
+10:      <%= @lesson.paper %>
+11:    </p>
+12:    
+13:    <p>
+14:      <strong>Level:</strong>
+15:      <%= @lesson.level %>
+16:    </p>
+17:    
+18:    <p>
+19:      <strong>Year:</strong>
+20:      <%= @lesson.year %>
+21:    </p>
+22:    
+23:    <p>
+24:      <strong>Session:</strong>
+25:      <%= @lesson.session %>
+26:    </p>
+27:    
+28:    <p>
+29:      <strong>Board:</strong>
+30:      <%= @lesson.board %>
+31:    </p>
+32:    
+33:    <p>
+34:      <strong>Description:</strong>
+35:      <%= @lesson.description %>
+36:    </p>
+37:    
+38:    <p>
+39:      <strong>Video:</strong>
+40:      <%=video_player @lesson.video.url , controls true %>
+41:    </p>
+42:    
+43:    <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+44:    <%= link_to 'Back', lessons_path %>
+  
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting do or '{' or '('
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting do or '{' or '('
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting do or '{' or '('
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting do or '{' or '('
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting do or '{' or '('
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting do or '{' or '('
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:34:01 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1228)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 4660)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%=video_player @lesson.video.url , :controls true %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Subject:</strong>
+5:      <%= @lesson.subject_id %>
+6:    </p>
+7:    
+8:    <p>
+9:      <strong>Paper:</strong>
+10:      <%= @lesson.paper %>
+11:    </p>
+12:    
+13:    <p>
+14:      <strong>Level:</strong>
+15:      <%= @lesson.level %>
+16:    </p>
+17:    
+18:    <p>
+19:      <strong>Year:</strong>
+20:      <%= @lesson.year %>
+21:    </p>
+22:    
+23:    <p>
+24:      <strong>Session:</strong>
+25:      <%= @lesson.session %>
+26:    </p>
+27:    
+28:    <p>
+29:      <strong>Board:</strong>
+30:      <%= @lesson.board %>
+31:    </p>
+32:    
+33:    <p>
+34:      <strong>Description:</strong>
+35:      <%= @lesson.description %>
+36:    </p>
+37:    
+38:    <p>
+39:      <strong>Video:</strong>
+40:      <%=video_player @lesson.video.url , :controls true %>
+41:    </p>
+42:    
+43:    <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+44:    <%= link_to 'Back', lessons_path %>
+  
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected true, expecting ')'
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:35:30 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 209.4ms | Allocations: 108329)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 0.2ms | Allocations: 111694)
+
+
+  
+ActionView::Template::Error (undefined method `videojs_rails' for #<#<Class:0x00007fb1e45b5b60>:0x00007fb1e45b41e8>
+Did you mean?  video_url):
+    37: 
+    38: <p>
+    39:   <strong>Video:</strong>
+    40:  <%= videojs_rails sources: { mp4: @lesson.video.url}, setup: "{}", controls: false, width:"400"  %>
+    41: </p>
+    42: 
+    43: <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+  
+app/views/lessons/show.html.erb:40
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:35:42 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 635)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.6ms | Allocations: 418)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 13371)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:36:06 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1233)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 4587)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+ <%= video_player src { mp4: @lesson.video.url}, setup: "{}", controls: false, width:"400"  %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Subject:</strong>
+5:      <%= @lesson.subject_id %>
+6:    </p>
+7:    
+8:    <p>
+9:      <strong>Paper:</strong>
+10:      <%= @lesson.paper %>
+11:    </p>
+12:    
+13:    <p>
+14:      <strong>Level:</strong>
+15:      <%= @lesson.level %>
+16:    </p>
+17:    
+18:    <p>
+19:      <strong>Year:</strong>
+20:      <%= @lesson.year %>
+21:    </p>
+22:    
+23:    <p>
+24:      <strong>Session:</strong>
+25:      <%= @lesson.session %>
+26:    </p>
+27:    
+28:    <p>
+29:      <strong>Board:</strong>
+30:      <%= @lesson.board %>
+31:    </p>
+32:    
+33:    <p>
+34:      <strong>Description:</strong>
+35:      <%= @lesson.description %>
+36:    </p>
+37:    
+38:    <p>
+39:      <strong>Video:</strong>
+40:     <%= video_player src { mp4: @lesson.video.url}, setup: "{}", controls: false, width:"400"  %>
+41:    </p>
+42:    
+43:    <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+44:    <%= link_to 'Back', lessons_path %>
+  
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting '}'
+app/views/lessons/show.html.erb:40: syntax error, unexpected '}', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting '}'
+app/views/lessons/show.html.erb:40: syntax error, unexpected '}', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting '}'
+app/views/lessons/show.html.erb:40: syntax error, unexpected '}', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting '}'
+app/views/lessons/show.html.erb:40: syntax error, unexpected '}', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting '}'
+app/views/lessons/show.html.erb:40: syntax error, unexpected '}', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting '}'
+app/views/lessons/show.html.erb:40: syntax error, unexpected '}', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:36:23 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1233)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 4592)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+ <%= video_player src = mp4: @lesson.video.url, setup: "{}", controls: false, width:"400"  %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Subject:</strong>
+5:      <%= @lesson.subject_id %>
+6:    </p>
+7:    
+8:    <p>
+9:      <strong>Paper:</strong>
+10:      <%= @lesson.paper %>
+11:    </p>
+12:    
+13:    <p>
+14:      <strong>Level:</strong>
+15:      <%= @lesson.level %>
+16:    </p>
+17:    
+18:    <p>
+19:      <strong>Year:</strong>
+20:      <%= @lesson.year %>
+21:    </p>
+22:    
+23:    <p>
+24:      <strong>Session:</strong>
+25:      <%= @lesson.session %>
+26:    </p>
+27:    
+28:    <p>
+29:      <strong>Board:</strong>
+30:      <%= @lesson.board %>
+31:    </p>
+32:    
+33:    <p>
+34:      <strong>Description:</strong>
+35:      <%= @lesson.description %>
+36:    </p>
+37:    
+38:    <p>
+39:      <strong>Video:</strong>
+40:     <%= video_player src = mp4: @lesson.video.url, setup: "{}", controls: false, width:"400"  %>
+41:    </p>
+42:    
+43:    <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+44:    <%= link_to 'Back', lessons_path %>
+  
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected tLABEL, expecting '='
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected tLABEL, expecting '='
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected tLABEL, expecting '='
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected tLABEL, expecting '='
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected tLABEL, expecting '='
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+app/views/lessons/show.html.erb:40: syntax error, unexpected ':', expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected tLABEL, expecting '='
+app/views/lessons/show.html.erb:40: syntax error, unexpected ',', expecting ')'
+app/views/lessons/show.html.erb:40: Can't assign to false
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:37:19 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1230)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 4589)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+ <%= video_player src: {mp4: @lesson.video.url, setup: "{}", controls: true, width:"600" %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Subject:</strong>
+5:      <%= @lesson.subject_id %>
+6:    </p>
+7:    
+8:    <p>
+9:      <strong>Paper:</strong>
+10:      <%= @lesson.paper %>
+11:    </p>
+12:    
+13:    <p>
+14:      <strong>Level:</strong>
+15:      <%= @lesson.level %>
+16:    </p>
+17:    
+18:    <p>
+19:      <strong>Year:</strong>
+20:      <%= @lesson.year %>
+21:    </p>
+22:    
+23:    <p>
+24:      <strong>Session:</strong>
+25:      <%= @lesson.session %>
+26:    </p>
+27:    
+28:    <p>
+29:      <strong>Board:</strong>
+30:      <%= @lesson.board %>
+31:    </p>
+32:    
+33:    <p>
+34:      <strong>Description:</strong>
+35:      <%= @lesson.description %>
+36:    </p>
+37:    
+38:    <p>
+39:      <strong>Video:</strong>
+40:     <%= video_player src: {mp4: @lesson.video.url, setup: "{}", controls: true, width:"600" %>
+41:    </p>
+42:    
+43:    <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+44:    <%= link_to 'Back', lessons_path %>
+  
+app/views/lessons/show.html.erb:40: syntax error, unexpected ')', expecting '}'
+app/views/lessons/show.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ')', expecting '}'
+app/views/lessons/show.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ')', expecting '}'
+app/views/lessons/show.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ')', expecting '}'
+app/views/lessons/show.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ')', expecting '}'
+app/views/lessons/show.html.erb:47: syntax error, unexpected end, expecting ')'
+app/views/lessons/show.html.erb:40: syntax error, unexpected ')', expecting '}'
+app/views/lessons/show.html.erb:47: syntax error, unexpected end, expecting ')'
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:37:52 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.7ms | Allocations: 418)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 13355)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-07 16:38:06 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XjaGMXn2Nwz/k2lwZFbe7kSjzYd71aX/xUJIpkcXrzHSgs3im8K0czePxfdaxOeB6kHL5qdELfbJGBcdFiZqWA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2930)
+
+
+Started GET "/" for ::1 at 2020-08-07 16:38:06 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 347)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 10372)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:38:07 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.7ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 333)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 10511)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:38:09 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 346)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 3.0ms | Allocations: 333)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 10378)
+
+
+Started GET "/lessons/1/edit" for ::1 at 2020-08-07 16:38:13 -0700
+Processing by LessonsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/edit.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/lessons/_form.html.erb:16
+  Rendered lessons/_form.html.erb (Duration: 4.4ms | Allocations: 3056)
+  Rendered lessons/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3453)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 332)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 13628)
+
+
+Started GET "/lessons" for ::1 at 2020-08-07 16:38:27 -0700
+Processing by LessonsController#index as HTML
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/lessons/index.html.erb:21
+  Rendered lessons/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1312)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 333)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.1ms | Allocations: 10941)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:38:42 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.3ms | Allocations: 771)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 333)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 10272)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:38:44 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 342)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 326)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 10358)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:43:52 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1002)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 4528)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Subjects</h1>
+
+<%@lesson.each do |less|%>
+<%= link_to "Video" , less_path %>
+
+
+):
+1:    <h1>Subjects</h1>
+2:    
+3:    <%@lesson.each do |less|%>
+4:    <%= link_to "Video" , less_path %>
+  
+app/views/pages/subjects.html.erb:8: syntax error, unexpected end-of-input, expecting end
+app/views/pages/subjects.html.erb:8: syntax error, unexpected end-of-input, expecting end
+app/views/pages/subjects.html.erb:8: syntax error, unexpected end-of-input, expecting end
+app/views/pages/subjects.html.erb:8: syntax error, unexpected end-of-input, expecting end
+app/views/pages/subjects.html.erb:8: syntax error, unexpected end-of-input, expecting end
+app/views/pages/subjects.html.erb:8: syntax error, unexpected end-of-input, expecting end
+Started GET "/subjects" for ::1 at 2020-08-07 16:44:09 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1409)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2884)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Subjects</h1>
+    2: 
+    3: <%@lesson.each do |less|%>
+    4: <%= link_to "Video" , less_path %>
+    5: <%end%>
+  
+app/views/pages/subjects.html.erb:3
+Started GET "/subjects" for ::1 at 2020-08-07 16:44:52 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 415.5ms | Allocations: 219982)
+Completed 500 Internal Server Error in 418ms (ActiveRecord: 0.9ms | Allocations: 221459)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `less_path' for #<#<Class:0x000055e65ef9c5c8>:0x000055e65efaf2b8>
+Did you mean?  lesson_path
+               lessons_path):
+    1: <h1>Subjects</h1>
+    2: 
+    3: <%@lessons.each do |less|%>
+    4: <%= link_to "Video" , less_path %>
+    5: <%end%>
+  
+app/views/pages/subjects.html.erb:4
+app/views/pages/subjects.html.erb:3
+Started GET "/subjects" for ::1 at 2020-08-07 16:45:28 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.7ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.9ms | Allocations: 564)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms | Allocations: 11829)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:45:30 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 663)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 333)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 11527)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:45:41 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.1ms | Allocations: 661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 333)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.1ms | Allocations: 10175)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:45:43 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 326)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 10361)
+
+

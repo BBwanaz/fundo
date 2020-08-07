@@ -1,4 +1,6 @@
 <h1>Subjects</h1>
 
-<%= link_to "First Video", Lesson.first%>
+<%@lessons.each do |less|%>
+<%= link_to "Video" , less %>
+<%end%>
 
