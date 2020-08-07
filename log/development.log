@@ -45483,3 +45483,137 @@ Processing by LessonsController#show as HTML
 Completed 200 OK in 6448ms (Views: 6387.9ms | ActiveRecord: 0.8ms | Allocations: 40929)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-08-07 15:30:05 -0700
+  [1m[35m (80.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 11.9ms | Allocations: 3042)
+Started GET "/" for ::1 at 2020-08-07 15:30:09 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 15.3ms | Allocations: 610)
+Completed 200 OK in 8463ms (Views: 8423.3ms | ActiveRecord: 0.0ms | Allocations: 191336)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 335)
+Completed 200 OK in 5493ms (Views: 5492.3ms | ActiveRecord: 0.0ms | Allocations: 127737)
+
+
+Started GET "/" for ::1 at 2020-08-07 15:30:20 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.9ms | Allocations: 335)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 9458)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 15:30:21 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (19.9ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 91.6ms | Allocations: 13289)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 333)
+Completed 200 OK in 110ms (Views: 87.9ms | ActiveRecord: 20.6ms | Allocations: 22745)
+
+
+Started GET "/contact" for ::1 at 2020-08-07 15:30:22 -0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (Duration: 17.0ms | Allocations: 82)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 346)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 9652)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 15:30:23 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.5ms | Allocations: 763)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 326)
+Completed 200 OK in 32ms (Views: 11.1ms | ActiveRecord: 0.1ms | Allocations: 10171)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 15:30:24 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:29:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 15.4ms | Allocations: 204)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 347)
+Completed 200 OK in 34ms (Views: 25.0ms | ActiveRecord: 0.2ms | Allocations: 11301)
+
+
+Started GET "/" for ::1 at 2020-08-07 15:30:27 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 345)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 9459)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
