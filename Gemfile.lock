@@ -995,6 +995,9 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    carrierwave-aws (1.4.0)
+      aws-sdk-s3 (~> 1.0)
+      carrierwave (>= 0.7, < 2.1)
     carrierwave-video (0.6.0)
       carrierwave
       streamio-ffmpeg
@@ -1160,6 +1163,7 @@ DEPENDENCIES
   bootstrap (~> 4.5.0)
   byebug
   carrierwave (~> 1.0)
+  carrierwave-aws
   carrierwave-video
   devise (~> 4.7, >= 4.7.2)
   figaro

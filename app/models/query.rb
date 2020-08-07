@@ -3,4 +3,5 @@ class Query < ApplicationRecord
 	belongs_to :subject
 	belongs_to :profile
 	validates_presence_of :profile
+	mount_uploader :image, ImageUploader
 end
