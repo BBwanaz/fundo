@@ -4,6 +4,7 @@ access all: [:home, :subjects, :contact], student: [:myprofile, {except: [:porta
   end
 
   def subjects
+    @lessons = Lesson.all
   end
 
   def contact

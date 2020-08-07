@@ -1,4 +1,44 @@
+<p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
 
-<%= video_player src: {mp4: "https://lamberta.github.io/html5-animation/examples/ch04/assets/movieclip.mp4"}, setup: "{}", controls: true, width:"600" %>
-<hr>
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+ <%= video_player src: {mp4: @lesson.video.url} , setup: "{}", controls: true, width:"600" %>
+</p>
+
+<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
+<%= link_to 'Back', lessons_path %>
