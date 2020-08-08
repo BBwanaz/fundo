@@ -47629,3 +47629,733 @@ Processing by LessonsController#show as HTML
 Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.1ms | Allocations: 10361)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:54:07 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1751)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms | Allocations: 15573)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+ <%= video_player src: {mp4: @lesson.video.url} , setup: "{}", controls: true, width:"600" %>
+</p>
+
+<%=if  link_to 'Edit', edit_lesson_path(@lesson) logged_in?(:tutor)%> |
+<%= link_to 'Back', lessons_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Subject:</strong>
+5:      <%= @lesson.subject_id %>
+6:    </p>
+7:    
+8:    <p>
+9:      <strong>Paper:</strong>
+10:      <%= @lesson.paper %>
+11:    </p>
+12:    
+13:    <p>
+14:      <strong>Level:</strong>
+15:      <%= @lesson.level %>
+16:    </p>
+17:    
+18:    <p>
+19:      <strong>Year:</strong>
+20:      <%= @lesson.year %>
+21:    </p>
+22:    
+23:    <p>
+24:      <strong>Session:</strong>
+25:      <%= @lesson.session %>
+26:    </p>
+27:    
+28:    <p>
+29:      <strong>Board:</strong>
+30:      <%= @lesson.board %>
+31:    </p>
+32:    
+33:    <p>
+34:      <strong>Description:</strong>
+35:      <%= @lesson.description %>
+36:    </p>
+37:    
+38:    <p>
+39:      <strong>Video:</strong>
+40:     <%= video_player src: {mp4: @lesson.video.url} , setup: "{}", controls: true, width:"600" %>
+41:    </p>
+42:    
+43:    <%=if  link_to 'Edit', edit_lesson_path(@lesson) logged_in?(:tutor)%> |
+44:    <%= link_to 'Back', lessons_path %>
+  
+app/views/lessons/show.html.erb:43: syntax error, unexpected tFID, expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected tFID, expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected tFID, expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected tFID, expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected tFID, expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected tFID, expecting then or ';' or '\n'
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:54:33 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1234)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 3297)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+ <%= video_player src: {mp4: @lesson.video.url} , setup: "{}", controls: true, width:"600" %>
+</p>
+
+<%=if  link_to 'Edit', edit_lesson_path(@lesson) if logged_in?(:tutor)%> |
+<%= link_to 'Back', lessons_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Subject:</strong>
+5:      <%= @lesson.subject_id %>
+6:    </p>
+7:    
+8:    <p>
+9:      <strong>Paper:</strong>
+10:      <%= @lesson.paper %>
+11:    </p>
+12:    
+13:    <p>
+14:      <strong>Level:</strong>
+15:      <%= @lesson.level %>
+16:    </p>
+17:    
+18:    <p>
+19:      <strong>Year:</strong>
+20:      <%= @lesson.year %>
+21:    </p>
+22:    
+23:    <p>
+24:      <strong>Session:</strong>
+25:      <%= @lesson.session %>
+26:    </p>
+27:    
+28:    <p>
+29:      <strong>Board:</strong>
+30:      <%= @lesson.board %>
+31:    </p>
+32:    
+33:    <p>
+34:      <strong>Description:</strong>
+35:      <%= @lesson.description %>
+36:    </p>
+37:    
+38:    <p>
+39:      <strong>Video:</strong>
+40:     <%= video_player src: {mp4: @lesson.video.url} , setup: "{}", controls: true, width:"600" %>
+41:    </p>
+42:    
+43:    <%=if  link_to 'Edit', edit_lesson_path(@lesson) if logged_in?(:tutor)%> |
+44:    <%= link_to 'Back', lessons_path %>
+  
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:55:19 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1235)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 3250)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @lesson.subject_id %>
+</p>
+
+<p>
+  <strong>Paper:</strong>
+  <%= @lesson.paper %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @lesson.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @lesson.year %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @lesson.session %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @lesson.board %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @lesson.description %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+ <%= video_player src: {mp4: @lesson.video.url} , setup: "{}", controls: true, width:"600" %>
+</p>
+
+<%=if  link_to 'Edit', edit_lesson_path(@lesson) if logged_in?(:tutor)%> 
+<%= link_to 'Back', lessons_path %>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    
+3:    <p>
+4:      <strong>Subject:</strong>
+5:      <%= @lesson.subject_id %>
+6:    </p>
+7:    
+8:    <p>
+9:      <strong>Paper:</strong>
+10:      <%= @lesson.paper %>
+11:    </p>
+12:    
+13:    <p>
+14:      <strong>Level:</strong>
+15:      <%= @lesson.level %>
+16:    </p>
+17:    
+18:    <p>
+19:      <strong>Year:</strong>
+20:      <%= @lesson.year %>
+21:    </p>
+22:    
+23:    <p>
+24:      <strong>Session:</strong>
+25:      <%= @lesson.session %>
+26:    </p>
+27:    
+28:    <p>
+29:      <strong>Board:</strong>
+30:      <%= @lesson.board %>
+31:    </p>
+32:    
+33:    <p>
+34:      <strong>Description:</strong>
+35:      <%= @lesson.description %>
+36:    </p>
+37:    
+38:    <p>
+39:      <strong>Video:</strong>
+40:     <%= video_player src: {mp4: @lesson.video.url} , setup: "{}", controls: true, width:"600" %>
+41:    </p>
+42:    
+43:    <%=if  link_to 'Edit', edit_lesson_path(@lesson) if logged_in?(:tutor)%> 
+44:    <%= link_to 'Back', lessons_path %>
+  
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+app/views/lessons/show.html.erb:43: syntax error, unexpected if (modifier), expecting then or ';' or '\n'
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:56:14 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 6.7ms | Allocations: 16060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.9ms | Allocations: 579)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.1ms | Allocations: 43912)
+
+
+Started GET "/lessons" for ::1 at 2020-08-07 16:56:17 -0700
+Processing by LessonsController#index as HTML
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/lessons/index.html.erb:21
+  Rendered lessons/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1437)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 333)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 11084)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:56:40 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.5ms | Allocations: 802)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 562)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 11809)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 16:56:41 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:52:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.0ms | Allocations: 331)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.1ms | Allocations: 11351)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 16:56:42 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.1ms | Allocations: 662)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 333)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 10174)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 17:00:57 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 12.6ms | Allocations: 8169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 335)
+Completed 200 OK in 26ms (Views: 21.3ms | ActiveRecord: 1.0ms | Allocations: 19844)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 17:00:58 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 374)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 331)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.2ms | Allocations: 10778)
+
+
+Started GET "/lessons/1/edit" for ::1 at 2020-08-07 17:01:05 -0700
+Processing by LessonsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms | Allocations: 1085)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-07 17:01:05 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 450)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.6ms | Allocations: 355)
+Completed 200 OK in 28ms (Views: 16.3ms | ActiveRecord: 0.5ms | Allocations: 20413)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-07 17:01:12 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"4Kpex9f2HdF1cS61XktHrE+jfMi94hsUMMMELuxn2mF2oEBZz7Wjtc8QHS9AIgh1bKTVHGrJplW1iYWe04jjTQ==", "user"=>{"email"=>"student@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "student@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/lessons/1/edit
+Completed 302 Found in 252ms (ActiveRecord: 0.2ms | Allocations: 4657)
+
+
+Started GET "/lessons/1/edit" for ::1 at 2020-08-07 17:01:13 -0700
+Processing by LessonsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as #<Proc:0x000055efecb45f78@/home/bwanaz/.rvm/gems/ruby-2.6.3/gems/petergate-2.0.1/lib/petergate/action_controller/base.rb:46> rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 2447)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-07 17:01:13 -0700
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1847)
+
+
+Started GET "/" for ::1 at 2020-08-07 17:01:13 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 203)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 11010)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 17:01:15 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.1ms | Allocations: 656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 11363)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 17:01:17 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 332)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 187)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 11568)
+
+
+Started GET "/lessons/1/edit" for ::1 at 2020-08-07 17:01:21 -0700
+Processing by LessonsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as #<Proc:0x000055efecb45f78@/home/bwanaz/.rvm/gems/ruby-2.6.3/gems/petergate-2.0.1/lib/petergate/action_controller/base.rb:46> rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 2460)
+
+
+Started GET "/" for ::1 at 2020-08-07 17:01:21 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 190)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.1ms | Allocations: 10726)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 17:01:30 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.1ms | Allocations: 654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 11364)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 17:01:31 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 326)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.2ms | Allocations: 11551)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-07 17:01:48 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Fpb9zkLKrsXgoguNl3LOKQrpVdYVY8kAtNKaMHzl6gF4KymVA9tfbuotF5ViyjmI30qq0pddKkFPfRx4TufdHw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.2ms | Allocations: 6629)
+
+
+Started GET "/" for ::1 at 2020-08-07 17:01:48 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 337)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 9547)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-07 17:01:50 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 355)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 10615)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-07 17:01:54 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"zFcqVk6td41fNi8ZyUMzA+2hMz9JUUPhLjC6iCCdOQcPDCa/bRODiFXRMU46atk5ILGMr1vyKTAcL7Ub7BfG6w==", "user"=>{"email"=>"tutor@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tutor@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 250ms (ActiveRecord: 0.2ms | Allocations: 2733)
+
+
+Started GET "/" for ::1 at 2020-08-07 17:01:54 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 191)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 10722)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 17:01:56 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.0ms | Allocations: 654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 11363)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 17:01:57 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 352)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 182)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 11575)
+
+
+Started GET "/lessons/1/edit" for ::1 at 2020-08-07 17:02:02 -0700
+Processing by LessonsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/edit.html.erb within layouts/application
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/lessons/_form.html.erb:16
+  Rendered lessons/_form.html.erb (Duration: 14.3ms | Allocations: 7836)
+  Rendered lessons/edit.html.erb within layouts/application (Duration: 15.8ms | Allocations: 8238)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.8ms | Allocations: 19616)
+
+
+Started GET "/lessons" for ::1 at 2020-08-07 17:02:06 -0700
+Processing by LessonsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/index.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/lessons/index.html.erb:21
+  Rendered lessons/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1323)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 189)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 12156)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 17:02:13 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.1ms | Allocations: 660)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 189)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 11394)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 17:02:15 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 351)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 11572)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 17:02:16 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.3ms | Allocations: 654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.2ms | Allocations: 11362)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-07 17:05:52 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LFOtY4XR2kK00+zj+mH+vBUktT8S187XHnoJov9F13u39+0HQkxgNP9TsAaQVZYOyvf7+Met7JiPNVndw4PLqQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 2165)
+
+
+Started GET "/" for ::1 at 2020-08-07 17:05:52 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 337)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 9557)
+
+
+Started GET "/subjects" for ::1 at 2020-08-07 17:05:54 -0700
+Processing by PagesController#subjects as HTML
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 1.1ms | Allocations: 656)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 326)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 10161)
+
+
+Started GET "/lessons/1" for ::1 at 2020-08-07 17:05:55 -0700
+Processing by LessonsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:51:in `set_lesson'
+  Rendering lessons/show.html.erb within layouts/application
+  Rendered lessons/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 348)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 328)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 10361)
+
+
+Started GET "/" for ::1 at 2020-08-07 17:06:25 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 335)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 9540)
+
+

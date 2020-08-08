@@ -40,5 +40,5 @@
  <%= video_player src: {mp4: @lesson.video.url} , setup: "{}", controls: true, width:"600" %>
 </p>
 
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'Back', lessons_path %>
+<%=  link_to 'Edit', edit_lesson_path(@lesson) if logged_in?(:tutor)%> 
+<%= link_to 'Back', subjects_path %>

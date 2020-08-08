@@ -1,7 +1,6 @@
 class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-  access all: [:index, :show, :new, :edit, :create, :update, :destroy], user: :all
-
+  access all: [:show], tutor: [:index, :show, :edit, :create, :update, :destroy, :set_lesson, :lesson_params]
   # GET /lessons
   def index
     @lessons = Lesson.all
