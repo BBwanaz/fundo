@@ -9,7 +9,7 @@ class Query < ApplicationRecord
     friendly_id :subject_id, use: :slugged
 
     include SubjectParameterize
-    include GenNewFriedly
+    include GenNewFriendly
 
     
 
