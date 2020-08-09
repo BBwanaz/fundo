@@ -10,8 +10,4 @@ class Query < ApplicationRecord
 
     include SubjectParameterize
     include GenNewFriendly
-
-    
-
-
 end
