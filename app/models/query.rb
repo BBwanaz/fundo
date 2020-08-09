@@ -6,5 +6,5 @@ class Query < ApplicationRecord
 	belongs_to :profile
 	validates_presence_of :profile
 	mount_uploader :image, ImageUploader
-    friendly_id :subject, use: :slugged
+    friendly_id :session, use: :slugged
 end

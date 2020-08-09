@@ -62,7 +62,7 @@ class QueriesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_query
-      @query = Query.find(params[:id])
+      @query = Query.friendly.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
