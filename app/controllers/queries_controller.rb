@@ -10,6 +10,7 @@ class QueriesController < ApplicationController
     @creator = Profile.find(@query.creator)
   end
 
+
   # GET /queries/new
   def new
     @query = Query.new
@@ -26,9 +27,11 @@ class QueriesController < ApplicationController
       @query.accepted!
       @query.update(profile_id: current_user.profile_id)
     
-  else @query.active! if @query.profile_id == @current_user.profile_id
+  elsif @query.profile_id == @current_user.profile_id
+    @query.active!
+    @query.update(profile_id: @query.creator)
   end
-    redirect_to portal_path
+    redirect_to my_profile_path
   end
 
   # POST /queries

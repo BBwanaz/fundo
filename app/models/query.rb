@@ -9,7 +9,7 @@ class Query < ApplicationRecord
 	belongs_to :profile
 	
 	mount_uploader :image, ImageUploader
-    friendly_id :subject_id, use: :slugged
+    friendly_id :subject_link, use: :slugged
 
     include SubjectParameterize
     include GenNewFriendly

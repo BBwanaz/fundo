@@ -1,5 +1,6 @@
     <%if query.active? %>
-    <%= link_to query.status, update_status_query_path(query) %>
+    <%= link_to query.status, update_status_query_path(query) if logged_in?(:tutor)%>
+    <%= query.status if logged_in?(:student) %>
     <% else %>
     <%= link_to 'Give_up', update_status_query_path(query) if query.profile_id == @current_user.profile_id %>
     <%= "Taken".html_safe if query.profile_id != @current_user.profile_id %>

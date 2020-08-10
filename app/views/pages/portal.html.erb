@@ -19,6 +19,7 @@
   <tbody>
     <% @queries.each do |query| %>
       <tr>
+        <% if query.active? %>
         <td><%= query.subject.title%></td>
         <td><%= query.paper %></td>
         <td><%= query.level %></td>
@@ -30,6 +31,7 @@
         <td><%= link_to 'Show', query %></td>
         <td><%=  render 'shared/qstatus', query: query %></td>
       </tr>
+      <%end%>
     <% end %>
   </tbody>
 </table>

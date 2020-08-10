@@ -3,7 +3,7 @@ class Lesson < ApplicationRecord
 
   belongs_to :subject
   mount_uploader :video, VideoUploader
-  friendly_id :subject_id, use: :slugged
+  friendly_id :subject_link, use: :slugged
 
   include SubjectParameterize
   include GenNewFriendly
