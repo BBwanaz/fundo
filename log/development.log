@@ -64785,3 +64785,1156 @@ Processing by LessonsController#show as HTML
 Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.8ms | Allocations: 57708)
 
 
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/" for ::1 at 2020-08-10 08:06:01 -0700
+  [1m[35m (25.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (29.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 1.6ms | Allocations: 462)
+Completed 200 OK in 780ms (Views: 488.4ms | ActiveRecord: 30.3ms | Allocations: 40954)
+
+
+Started GET "/portal" for ::1 at 2020-08-10 08:06:06 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.5ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 14.5ms | Allocations: 221)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 34)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 200.5ms | Allocations: 34748)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 363ms (Views: 219.3ms | ActiveRecord: 3.3ms | Allocations: 48494)
+
+
+Started GET "/queries/nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb" for ::1 at 2020-08-10 08:06:08 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"}
+  [1m[36mQuery Load (22.4ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 24.3ms | Allocations: 17597)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 187)
+Completed 200 OK in 62ms (Views: 34.5ms | ActiveRecord: 22.7ms | Allocations: 30491)
+
+
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mQuery Load (0.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries" ORDER BY "queries"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLesson Load (16.6ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" ORDER BY "lessons"."id" ASC LIMIT ?[0m  [["LIMIT", 1000]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: Initialization autoloaded the constants ActionText::ContentHelper and ActionText::TagHelper.
+
+Being able to do this is deprecated. Autoloading during initialization is going
+to be an error condition in future versions of Rails.
+
+Reloading does not reboot the application, and therefore code executed during
+initialization does not run again. So, if you reload ActionText::ContentHelper, for example,
+the expected changes won't be reflected in that stale Module object.
+
+These autoloaded constants have been unloaded.
+
+Please, check the "Autoloading and Reloading Constants" guide for solutions.
+ (called from <main> at /home/bwanaz/Desktop/fundoApp/fundo/config/environment.rb:5)
+Started GET "/portal" for ::1 at 2020-08-10 08:07:21 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.5ms | Allocations: 222)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 34)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 52.1ms | Allocations: 35851)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.8ms | Allocations: 435)
+Completed 200 OK in 111ms (Views: 86.1ms | ActiveRecord: 2.7ms | Allocations: 78837)
+
+
+Started GET "/queries/nov" for ::1 at 2020-08-10 08:07:23 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"nov"}
+  [1m[36mQuery Load (0.3ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 9.0ms | Allocations: 17510)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 187)
+Completed 200 OK in 38ms (Views: 18.9ms | ActiveRecord: 0.6ms | Allocations: 30412)
+
+
+Started GET "/queries/nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb" for ::1 at 2020-08-10 08:07:26 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1825)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.5ms | Allocations: 13769)
+
+
+Started GET "/portal" for ::1 at 2020-08-10 08:07:41 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 25.7ms | Allocations: 8423)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 49ms (Views: 45.2ms | ActiveRecord: 0.7ms | Allocations: 19143)
+
+
+Started GET "/queries/nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb" for ::1 at 2020-08-10 08:07:43 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1820)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 31ms (Views: 21.4ms | ActiveRecord: 0.6ms | Allocations: 13742)
+
+
+Started GET "/queries/nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb/edit" for ::1 at 2020-08-10 08:07:51 -0700
+Processing by QueriesController#edit as HTML
+  Parameters: {"id"=>"nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering queries/edit.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/subject_parameterize.rb:6:in `subject_id'
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/queries/_form.html.erb:16
+  Rendered queries/_form.html.erb (Duration: 583.6ms | Allocations: 31807)
+  Rendered queries/edit.html.erb within layouts/application (Duration: 597.0ms | Allocations: 32204)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 187)
+Completed 200 OK in 614ms (Views: 606.9ms | ActiveRecord: 0.7ms | Allocations: 43656)
+
+
+Started PATCH "/queries/nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb" for ::1 at 2020-08-10 08:08:10 -0700
+Processing by QueriesController#update as HTML
+  Parameters: {"authenticity_token"=>"dqVZslBelt4HBLHKfy0kv1aX7mEkrbzzXi2xeTTy5o9VHRbEvjK64B7NjOLgLLvstkZSgRmTdLewiA5CCKHWug==", "query"=>{"subject_id"=>"1", "paper"=>"2", "level"=>"A Level", "year"=>"2010", "session"=>"November", "board"=>"ZIMSEC", "description"=>"Whatever"}, "commit"=>"Update Query", "id"=>"nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"}
+  [1m[36mQuery Load (0.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+  [1m[36mQuery Update (0.3ms)[0m  [1m[33mUPDATE "queries" SET "paper" = ?, "session" = ?, "updated_at" = ? WHERE "queries"."id" = ?[0m  [["paper", 2], ["session", "November"], ["updated_at", "2020-08-10 15:08:10.541876"], ["id", 4]]
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+  [1m[35m (69.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+Redirected to http://localhost:3000/queries/nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb
+Completed 302 Found in 97ms (ActiveRecord: 70.8ms | Allocations: 9245)
+
+
+Started GET "/queries/nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb" for ::1 at 2020-08-10 08:08:10 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1824)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | Allocations: 181)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 0.5ms | Allocations: 13768)
+
+
+Started GET "/queries/nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb" for ::1 at 2020-08-10 08:08:15 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov-f7fe3ac4-b148-4605-b977-5b31a9f773eb"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1822)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 35ms (Views: 27.0ms | ActiveRecord: 0.5ms | Allocations: 13747)
+
+
+Started GET "/portal" for ::1 at 2020-08-10 08:08:19 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 11.5ms | Allocations: 8422)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 43ms (Views: 20.5ms | ActiveRecord: 0.6ms | Allocations: 19123)
+
+
+Started GET "/queries/nov" for ::1 at 2020-08-10 08:08:20 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"nov"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "nov"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 0.5ms | Allocations: 13655)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-10 08:08:42 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WrMZZC3x/JNWjuEX+/xmWEy6V2zlpBN0IRkM66ieVQ15C1YSw53QrU9H3D9k/fkLrGvrjNia2zDPvLPQlM1lOA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 2883)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:08:42 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 347)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 9819)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-10 08:08:44 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 13.1ms | Allocations: 450)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 66.0ms | Allocations: 2542)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 355)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.0ms | Allocations: 13192)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-10 08:08:48 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"KJ/pkaOLGyDn82BzMIXY8s4AIvRPgAiWBhYYedC9wgLuFgJHfEcXbmxXv4gQIvmO7iGZi2eUMGWgta4es3xDug==", "user"=>{"email"=>"student@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "student@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 574ms (ActiveRecord: 0.2ms | Allocations: 4796)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:08:48 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 202)
+Completed 200 OK in 14ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 10716)
+
+
+Started GET "/subjects" for ::1 at 2020-08-10 08:08:51 -0700
+Processing by PagesController#subjects as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/subjects.html.erb within layouts/application
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons"[0m
+  ↳ app/views/pages/subjects.html.erb:3
+  Rendered pages/subjects.html.erb within layouts/application (Duration: 36.1ms | Allocations: 8711)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.2ms | Allocations: 189)
+Completed 200 OK in 51ms (Views: 44.2ms | ActiveRecord: 1.1ms | Allocations: 21158)
+
+
+Started GET "/my-profile" for ::1 at 2020-08-10 08:08:52 -0700
+Processing by PagesController#myprofile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/myprofile.html.erb within layouts/application
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/profile_builder.rb:6:in `profile'
+  Rendered pages/myprofile.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2416)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.3ms | Allocations: 13151)
+
+
+Started GET "/queries/new" for ::1 at 2020-08-10 08:08:53 -0700
+Processing by QueriesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering queries/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/queries/_form.html.erb:16
+  Rendered queries/_form.html.erb (Duration: 3.6ms | Allocations: 2525)
+  Rendered queries/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 2733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.2ms | Allocations: 13871)
+
+
+Started POST "/queries" for ::1 at 2020-08-10 08:09:16 -0700
+Processing by QueriesController#create as HTML
+  Parameters: {"authenticity_token"=>"hgcHJmqy6qh6LFw+XFzl1soJGFDcycY6yaZNVwSDl2lHNPHXlPZS5WuV/xGLeH3ADniwrgGcWKK/tfwLYv4BtA==", "query"=>{"subject_id"=>"1", "paper"=>"1", "level"=>"A Level", "year"=>"2010", "session"=>"December", "board"=>"ZIMSEC", "description"=>"Whatever", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f1e8c2bf2d0 @tempfile=#<Tempfile:/tmp/RackMultipart20200810-4723-1cijlhl.jpeg>, @original_filename="cat.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"query[image]\"; filename=\"cat.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Query"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/subject_parameterize.rb:6:in `subject_id'
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/subject_parameterize.rb:6:in `subject_id'
+  [1m[36mQuery Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "queries" WHERE "queries"."id" IS NOT NULL AND "queries"."slug" = ? LIMIT ?[0m  [["slug", "physicsdecember2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+  [1m[36mQuery Create (0.3ms)[0m  [1m[32mINSERT INTO "queries" ("paper", "level", "year", "session", "board", "description", "image", "created_at", "updated_at", "subject_id", "profile_id", "creator", "slug") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["paper", 1], ["level", "A Level"], ["year", 2010], ["session", "December"], ["board", "ZIMSEC"], ["description", "Whatever"], ["image", "cat.jpeg"], ["created_at", "2020-08-10 15:09:16.969916"], ["updated_at", "2020-08-10 15:09:16.969916"], ["subject_id", 1], ["profile_id", 1], ["creator", 1], ["slug", "physicsdecember2010"]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+[Aws::S3::Client 200 0.362193 0 retries] put_object(acl:"public-read",body:#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1597072156-4723-0001-8203/cat.jpeg (7010 bytes)>,content_type:"image/jpeg",expires:2020-08-17 15:09:16 UTC,cache_control:"max-age=604800",bucket:"fundoapp",key:"uploads/cat.jpeg")  
+
+  [1m[35m (80.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+Redirected to http://localhost:3000/my-profile
+Completed 302 Found in 456ms (ActiveRecord: 81.0ms | Allocations: 11961)
+
+
+Started GET "/my-profile" for ::1 at 2020-08-10 08:09:17 -0700
+Processing by PagesController#myprofile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/myprofile.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/profile_builder.rb:6:in `profile'
+  Rendered pages/myprofile.html.erb within layouts/application (Duration: 1.3ms | Allocations: 792)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 11487)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-10 08:09:19 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8udWMFM9SSeMotSjbldCOmefrMyF/Pkie4FtrrNei/VZOWqisXbSjzAo68l2xRBmpCQC5makACEOoiHY2j5/SQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2143)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:09:19 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 337)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 9532)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-10 08:09:20 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 355)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 10593)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-10 08:09:24 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"f24w78uBPUETULzSV4rKXz+faQEQ9XQ0TPp5TdgLLJEU4QggohOmWPisCchqfxchU3cmVora+6GbsfouBg0ppw==", "user"=>{"email"=>"tutor@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tutor@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 251ms (ActiveRecord: 0.2ms | Allocations: 2701)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:09:24 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 191)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 10697)
+
+
+Started GET "/portal" for ::1 at 2020-08-10 08:09:26 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.2ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 15.8ms | Allocations: 9944)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.8ms | Allocations: 20630)
+
+
+Started GET "/queries/physicsdecember2010" for ::1 at 2020-08-10 08:09:27 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"physicsdecember2010"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "physicsdecember2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 0.5ms | Allocations: 13662)
+
+
+Started GET "/queries/physicsdecember2010" for ::1 at 2020-08-10 08:09:57 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"physicsdecember2010"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "physicsdecember2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 7027)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 188)
+Completed 200 OK in 65ms (Views: 20.2ms | ActiveRecord: 2.6ms | Allocations: 46829)
+
+
+Started GET "/queries/physicsdecember2010/edit" for ::1 at 2020-08-10 08:10:06 -0700
+Processing by QueriesController#edit as HTML
+  Parameters: {"id"=>"physicsdecember2010"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "physicsdecember2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering queries/edit.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/subject_parameterize.rb:6:in `subject_id'
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/queries/_form.html.erb:16
+  Rendered queries/_form.html.erb (Duration: 4.7ms | Allocations: 3377)
+  Rendered queries/edit.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3494)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.5ms | Allocations: 14894)
+
+
+Started PATCH "/queries/physicsdecember2010" for ::1 at 2020-08-10 08:10:20 -0700
+Processing by QueriesController#update as HTML
+  Parameters: {"authenticity_token"=>"lIWGh/WlPBCoJyqH0JGRLRlVUPrUR1sv/qsW9uA+sSNugzFauUSiuG8sCFAcpxMDOxl0QUGK1lSr9ZVG55mXwQ==", "query"=>{"subject_id"=>"1", "paper"=>"2", "level"=>"A Level", "year"=>"2010", "session"=>"Dec", "board"=>"ZIMSEC", "description"=>"Whatever"}, "commit"=>"Update Query", "id"=>"physicsdecember2010"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "physicsdecember2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+  [1m[36mQuery Update (0.3ms)[0m  [1m[33mUPDATE "queries" SET "paper" = ?, "session" = ?, "updated_at" = ? WHERE "queries"."id" = ?[0m  [["paper", 2], ["session", "Dec"], ["updated_at", "2020-08-10 15:10:20.235493"], ["id", 8]]
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+  [1m[35m (198.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/queries_controller.rb:49:in `update'
+Redirected to http://localhost:3000/queries/physicsdecember2010
+Completed 302 Found in 211ms (ActiveRecord: 199.2ms | Allocations: 9088)
+
+
+Started GET "/queries/physicsdecember2010" for ::1 at 2020-08-10 08:10:20 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"physicsdecember2010"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "physicsdecember2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1737)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 13684)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-10 08:10:50 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"01zG0vUv4++3Qfi9S3BeeH/P4abkPqEn6qNFz29qgu4pWnEPuc59R3BK2mqHRtxWXYPFHXHzLFy//cZ/aM2kDA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2425)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:10:50 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 348)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 9773)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-10 08:10:52 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1072)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 355)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 10817)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-10 08:10:55 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"tig9PuQudN/6Z6UeWy4wTuaCM+CypY65/b6f1gs+XfrcalSnHmWlwVaM1nR3o2sBWFUv5x6gI9YNVIloFb35NQ==", "user"=>{"email"=>"student@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "student@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 252ms (ActiveRecord: 0.2ms | Allocations: 2759)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:10:55 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 194)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.1ms | Allocations: 10702)
+
+
+Started GET "/queries/new" for ::1 at 2020-08-10 08:10:57 -0700
+Processing by QueriesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering queries/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/queries/_form.html.erb:16
+  Rendered queries/_form.html.erb (Duration: 3.3ms | Allocations: 2467)
+  Rendered queries/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2554)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 13543)
+
+
+Started POST "/queries" for ::1 at 2020-08-10 08:11:28 -0700
+Processing by QueriesController#create as HTML
+  Parameters: {"authenticity_token"=>"sXF7LjqQjd7rJUCluQ6++60sQeCdBRnxylNSgkBYT+5+oZuDg+ca7/FkojzgfVjsz/ym/oqiLi4HPi9oS9jsYg==", "query"=>{"subject_id"=>"1", "paper"=>"7", "level"=>"A Level", "year"=>"2010", "session"=>"June", "board"=>"Blah", "description"=>"Whatever", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055cdfc4bf5a8 @tempfile=#<Tempfile:/tmp/RackMultipart20200810-4723-1ja6gfd.jpg>, @original_filename="thank.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"query[image]\"; filename=\"thank.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Query"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/subject_parameterize.rb:6:in `subject_id'
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/subject_parameterize.rb:6:in `subject_id'
+  [1m[36mQuery Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "queries" WHERE "queries"."id" IS NOT NULL AND "queries"."slug" = ? LIMIT ?[0m  [["slug", "physics-june-2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+  [1m[36mQuery Create (0.3ms)[0m  [1m[32mINSERT INTO "queries" ("paper", "level", "year", "session", "board", "description", "image", "created_at", "updated_at", "subject_id", "profile_id", "creator", "slug") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["paper", 7], ["level", "A Level"], ["year", 2010], ["session", "June"], ["board", "Blah"], ["description", "Whatever"], ["image", "thank.jpg"], ["created_at", "2020-08-10 15:11:28.433100"], ["updated_at", "2020-08-10 15:11:28.433100"], ["subject_id", 1], ["profile_id", 1], ["creator", 1], ["slug", "physics-june-2010"]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+[Aws::S3::Client 200 0.589645 0 retries] put_object(acl:"public-read",body:#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1597072288-4723-0002-1458/thank.jpg (266456 bytes)>,content_type:"image/jpeg",expires:2020-08-17 15:11:28 UTC,cache_control:"max-age=604800",bucket:"fundoapp",key:"uploads/thank.jpg")  
+
+  [1m[35m (76.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+Redirected to http://localhost:3000/my-profile
+Completed 302 Found in 681ms (ActiveRecord: 76.7ms | Allocations: 11812)
+
+
+Started GET "/my-profile" for ::1 at 2020-08-10 08:11:29 -0700
+Processing by PagesController#myprofile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/myprofile.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/profile_builder.rb:6:in `profile'
+  Rendered pages/myprofile.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 12674)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-10 08:11:32 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VNmn9FFz0SowV4+9hkmjU7whk+d9S5T6XWsveOWK9kE/udn/SHn0cqZKXx7Rp/lkTMYKB4RgWyPTjtB9DFo0/A=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2146)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:11:32 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 335)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 9522)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-10 08:11:33 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 345)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 10567)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-10 08:11:36 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"EK1tXxf4Fz/XQwr9X45dOHcP3muN40iQbfYw/V0HUSM5hoIVqj9P/A/hNWvwXeG9tmxaOUewkyR9lUBZLQjo4A==", "user"=>{"email"=>"tutor@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tutor@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 254ms (ActiveRecord: 0.1ms | Allocations: 2708)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:11:36 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 191)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 10702)
+
+
+Started GET "/portal" for ::1 at 2020-08-10 08:11:37 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.3ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 35)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 17.1ms | Allocations: 11508)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.9ms | Allocations: 22193)
+
+
+Started GET "/queries/physics-june-2010" for ::1 at 2020-08-10 08:11:38 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"physics-june-2010"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "physics-june-2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.5ms | Allocations: 13655)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-10 08:11:55 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s1tVF6C90bO74NV0mU3jnZcl/nZbX4p36Imm/12btqSDl/dYyHqf1h+HQdDZ0cLGU9EiVRKLA0OK5C8HILXF1g=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2145)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:11:55 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 335)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 9524)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-10 08:11:57 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 345)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 10573)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-10 08:12:00 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"2FqmRjXG3ZSVJxO5JI+PvafbQco/jCjRRIpP34A2rV53TPnlb7VrZVTZF12aRQT6DuNIGIuukVrlj9n6+GV1+A==", "user"=>{"email"=>"student@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "student@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 252ms (ActiveRecord: 0.2ms | Allocations: 2704)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:12:00 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 190)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 10699)
+
+
+Started GET "/queries/new" for ::1 at 2020-08-10 08:12:01 -0700
+Processing by QueriesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering queries/new.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/views/queries/_form.html.erb:16
+  Rendered queries/_form.html.erb (Duration: 4.0ms | Allocations: 2466)
+  Rendered queries/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2553)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 13538)
+
+
+Started POST "/queries" for ::1 at 2020-08-10 08:12:23 -0700
+Processing by QueriesController#create as HTML
+  Parameters: {"authenticity_token"=>"3HhbRu3jFdzJtS15jEaya/Zs09YUeMKERWek5ydXijw5SDbfUlPhrM/+8eroe2im/9K/ybe4tCeNEgu/YRDbzQ==", "query"=>{"subject_id"=>"1", "paper"=>"7", "level"=>"1", "year"=>"2010", "session"=>"June", "board"=>"", "description"=>"blah", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055cdf95dac38 @tempfile=#<Tempfile:/tmp/RackMultipart20200810-4723-1h4rue3.jpg>, @original_filename="cole.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"query[image]\"; filename=\"cole.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Query"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/concerns/subject_parameterize.rb:6:in `subject_id'
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/subject_parameterize.rb:6:in `subject_id'
+  [1m[36mQuery Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "queries" WHERE "queries"."id" IS NOT NULL AND "queries"."slug" = ? LIMIT ?[0m  [["slug", "physics-june-2010"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+  [1m[36mQuery Create (0.3ms)[0m  [1m[32mINSERT INTO "queries" ("paper", "level", "year", "session", "board", "description", "image", "created_at", "updated_at", "subject_id", "profile_id", "creator", "slug") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["paper", 7], ["level", "1"], ["year", 2010], ["session", "June"], ["board", ""], ["description", "blah"], ["image", "cole.jpg"], ["created_at", "2020-08-10 15:12:23.539229"], ["updated_at", "2020-08-10 15:12:23.539229"], ["subject_id", 1], ["profile_id", 1], ["creator", 1], ["slug", "physics-june-2010-4bab7cb3-baa1-4a2c-9535-fa9645d79cca"]]
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+[Aws::S3::Client 200 0.918474 0 retries] put_object(acl:"public-read",body:#<File:/home/bwanaz/Desktop/fundoApp/fundo/public/uploads/tmp/1597072343-4723-0003-7799/cole.jpg (3149780 bytes)>,content_type:"image/jpeg",expires:2020-08-17 15:12:23 UTC,cache_control:"max-age=604800",bucket:"fundoapp",key:"uploads/cole.jpg")  
+
+  [1m[35m (62.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/queries_controller.rb:40:in `create'
+Redirected to http://localhost:3000/my-profile
+Completed 302 Found in 997ms (ActiveRecord: 62.9ms | Allocations: 12464)
+
+
+Started GET "/my-profile" for ::1 at 2020-08-10 08:12:24 -0700
+Processing by PagesController#myprofile as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/myprofile.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/concerns/profile_builder.rb:6:in `profile'
+  Rendered pages/myprofile.html.erb within layouts/application (Duration: 1.3ms | Allocations: 786)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.2ms | Allocations: 11470)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-10 08:12:25 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YThCIeeevTvJFEOZZlXDNqFPYR/o+gUC+Yek5aPMm2kt542ofoblsHiMuwINAoAi3lgbuSieWz2noW8SVDmzQQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2151)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:12:25 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 335)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 9529)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-10 08:12:27 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 345)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 10570)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-10 08:12:28 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"t8hCz+orZFPLSrPD6Gxp6GQZkRMFC3/yfEfz2pLcIiJDSYZGR7AYuMtlCmAuCHIhvEv+wJI2qz53//DRl3zElw==", "user"=>{"email"=>"student@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "student@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 252ms (ActiveRecord: 0.1ms | Allocations: 2704)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:12:29 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 8)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 190)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 10694)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2020-08-10 08:12:31 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cYhBWdgmlh+3rEJjTqbFqmIcRWNpdenarEObjLpnCxBZSKr93CPnJYCxyIfMBmS3l2ytLQAsiOatQSe+lhTiTw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2149)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:12:31 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.5ms | Allocations: 335)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 9524)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-08-10 08:12:32 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 73)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 999)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 345)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 10569)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-08-10 08:12:35 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"3UeIFXf7yXaNNWIJUk91GgjJZ260tHf2kf42cVoOgOs33/VCH0niI2Wat0IqPhvWmbE5w+aWxUw/4kHVdNitqw==", "user"=>{"email"=>"tutor@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "tutor@test.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 251ms (ActiveRecord: 0.2ms | Allocations: 2706)
+
+
+Started GET "/" for ::1 at 2020-08-10 08:12:35 -0700
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.4ms | Allocations: 190)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 10701)
+
+
+Started GET "/portal" for ::1 at 2020-08-10 08:12:36 -0700
+Processing by PagesController#portal as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering pages/portal.html.erb within layouts/application
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries"[0m
+  ↳ app/views/pages/portal.html.erb:20
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 32)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 31)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  [1m[36mCACHE Subject Load (0.0ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:22
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/pages/portal.html.erb:29
+  Rendered shared/_qstatus.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered pages/portal.html.erb within layouts/application (Duration: 18.1ms | Allocations: 12994)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.7ms | Allocations: 23677)
+
+
+Started GET "/queries/physics-june-2010-4bab7cb3-baa1-4a2c-9535-fa9645d79cca" for ::1 at 2020-08-10 08:12:37 -0700
+Processing by QueriesController#show as HTML
+  Parameters: {"id"=>"physics-june-2010-4bab7cb3-baa1-4a2c-9535-fa9645d79cca"}
+  [1m[36mQuery Load (0.1ms)[0m  [1m[34mSELECT "queries".* FROM "queries" WHERE "queries"."slug" = ? LIMIT ?[0m  [["slug", "physics-june-2010-4bab7cb3-baa1-4a2c-9535-fa9645d79cca"], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:65:in `set_query'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/queries_controller.rb:10:in `show'
+  Rendering queries/show.html.erb within layouts/application
+  [1m[36mSubject Load (0.1ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:6
+  [1m[36mCACHE Profile Load (0.0ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/queries/show.html.erb:50
+  Rendered queries/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_navigation.html.erb (Duration: 0.3ms | Allocations: 181)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.5ms | Allocations: 13655)
+
+

@@ -3,7 +3,7 @@ module SubjectParameterize
 
  included do 
     def subject_id
-    "#{subject.title}".parameterize
+    "#{subject.title}-" + "#{session}-" + "#{year}".parameterize
   end
  end
 end
