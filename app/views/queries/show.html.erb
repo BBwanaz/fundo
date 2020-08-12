@@ -49,6 +49,11 @@
 
 <h3> Owner: <%= link_to "#{@query.profile.name}", @query.profile%> </h3>
 
-<%= link_to 'Edit', edit_query_path(@query) if @query.profile_id == current_user.profile_id %> |
+<% if @query.profile_id == current_user.profile_id %> 
+
+<%= link_to 'Submit Video', archive_query_path(@query) %> |
+
+<%= link_to 'Edit', edit_query_path(@query) %> |
+<% end %>
 <%= link_to 'Back', portal_path %>
 

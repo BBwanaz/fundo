@@ -1,6 +1,6 @@
 class QueriesController < ApplicationController
-  before_action :set_query, only: [:show, :edit, :update, :destroy, :update_status, :set_creator]
-  access  student: [:new,:create, {except: [:show, :edit, :update,  :destroy, :set_query, :query_params]}], tutor: [:update_status,:show, :index, :edit, :update, :destroy, :set_query, :query_params]
+  before_action :set_query, only: [:show, :edit, :update, :destroy, :update_status, :set_creator, :archive]
+  access  student: [:new,:create, {except: [:show, :edit, :update,  :destroy, :set_query, :query_params]}], tutor: [:archive, :update_status,:show, :index, :edit, :update, :destroy, :set_query, :query_params]
 
   # GET /queries
   # Queries index is in pages and is called Portal
@@ -32,6 +32,12 @@ class QueriesController < ApplicationController
     @query.update(profile_id: @query.creator)
   end
     redirect_to my_profile_path
+  end
+
+  def archive
+    @query.archived!
+    @query.update(profile_id: 13)
+    redirect_to new_lesson_path
   end
 
   # POST /queries

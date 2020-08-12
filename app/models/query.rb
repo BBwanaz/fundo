@@ -3,7 +3,7 @@ class Query < ApplicationRecord
 	validates_presence_of :image
 	validates_presence_of :profile
 
-	enum status:{active: 0, accepted: 1, completed: 2}
+	enum status:{active: 0, accepted: 1, archived: 2}
 	
 	belongs_to :subject
 	belongs_to :profile

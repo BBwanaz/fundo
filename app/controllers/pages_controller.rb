@@ -16,7 +16,7 @@ access all: [:home, :subjects, :contact], student: [:myprofile, {except: [:porta
 
   def myprofile
     
-    @queries = Query.where(creator: current_user.id) if logged_in?(:student)
+     @queries = Query.where(creator: current_user.id) if logged_in?(:student)
      @queries = Query.where(profile_id: current_user.id) if logged_in?(:tutor)
      @queries = Query.all if logged_in?(:root_admin)
    end

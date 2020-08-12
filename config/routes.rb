@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     member do
       get :update_status
       get :set_creator
+      get :archive
     end
   end
 
