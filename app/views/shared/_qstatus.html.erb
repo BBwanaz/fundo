@@ -1,7 +1,11 @@
     <%if query.active? %>
-    <%= link_to query.status, update_status_query_path(query) if logged_in?(:tutor)%>
+    <%= link_to query.status, update_status_query_path(query) if logged_in?(:tutor) | logged_in?(:root_admin)%>
     <%= query.status if logged_in?(:student) %>
-    <% else %>
+    <% elsif query.accepted? %>
     <%= link_to 'Give_up', update_status_query_path(query) if query.profile_id == @current_user.profile_id %>
     <%= "Taken".html_safe if query.profile_id != @current_user.profile_id %>
+    <% elsif query.submitted? %>
+    <%= link_to "Archive", archive_query_path(query) %>
+    <% elsif query.archived? %>
+    <%= query.status if logged_in?(:root_admin) %>
     <% end %>
