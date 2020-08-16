@@ -39,9 +39,15 @@ class QueriesController < ApplicationController
   end
 
   def archive
+
+    if @query.submitted?
     @query.archived!
     @query.update(profile_id: 13)
+    redirect_to my_profile_path
+  else 
+    @query.submitted!
     redirect_to new_lesson_path
+  end
   end
 
   # POST /queries
