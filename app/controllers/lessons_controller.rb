@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
   access all: [:show, :index], tutor: [:index, :new, :show, :edit, :create, :update, :destroy, :set_lesson, :lesson_params]
   # GET /lessons
   def index
-   @lessons = Subject.find(params[:subject_id]).lessons
+   @lessons = Subject.friendly.find(params[:subject_id]).lessons
   end
 
   # GET /lessons/1

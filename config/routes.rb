@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :subjects do
-    resources :lessons
+    resources :lessons, path: ''
   end
 
   resources :profiles
