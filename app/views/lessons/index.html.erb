@@ -1,41 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lessons</h1>
+<h1><%=  %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Subject</th>
-      <th>Paper</th>
-      <th>Level</th>
-      <th>Year</th>
-      <th>Session</th>
-      <th>Board</th>
-      <th>Description</th>
-      <th>Video</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @lessons.each do |lesson| %>
-      <tr>
-        <td><%= lesson.subject_id %></td>
-        <td><%= lesson.paper %></td>
-        <td><%= lesson.level %></td>
-        <td><%= lesson.year %></td>
-        <td><%= lesson.session %></td>
-        <td><%= lesson.board %></td>
-        <td><%= lesson.description %></td>
-        <td><%= lesson.video %></td>
-        <td><%= link_to 'Show', lesson %></td>
-        <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>
-        <td><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Lesson', new_lesson_path %>
+ <% @lessons.each do |less| %>
+  <p><%= link_to 'Video' ,subject_lesson_path(id: less.id) %> </p>
+  <hr>
+<% end  %>

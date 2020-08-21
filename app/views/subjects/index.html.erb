@@ -1,0 +1,7 @@
+<h1>Subjects</h1>
+
+<%@subjects.each do |sub|%>
+<% @sub = sub %>
+<p><%= link_to "#{sub.title}", subject_lessons_path(sub)%></p>
+<hr>
+<%end%>

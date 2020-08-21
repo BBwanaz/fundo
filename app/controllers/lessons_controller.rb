@@ -1,9 +1,9 @@
 class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
-  access all: [:show], tutor: [:index, :new, :show, :edit, :create, :update, :destroy, :set_lesson, :lesson_params]
+  access all: [:show, :index], tutor: [:index, :new, :show, :edit, :create, :update, :destroy, :set_lesson, :lesson_params]
   # GET /lessons
   def index
-    @lessons = Lesson.all
+   @lessons = Subject.find(params[:subject_id]).lessons
   end
 
   # GET /lessons/1
