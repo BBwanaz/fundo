@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%=  %></h1>
+<h1><%= Subject.find(params[:subject_id]).title %></h1>
 
  <% @lessons.each do |less| %>
   <p><%= link_to 'Video' ,subject_lesson_path(id: less.id) %> </p>
