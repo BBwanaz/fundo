@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= Subject.friendly.find(params[:subject_id]).title %></h1>
-
+ <%= render "shared/set_subject_name" %>
  <% @lessons.each do |less| %>
   <p><%= link_to 'Video' ,subject_lesson_path(id: less.id) %> </p>
   <hr>
