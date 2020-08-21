@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	
-  resources :lessons
+  
   resources :queries do
     member do
       get :update_status
@@ -9,9 +9,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :subjects do
+    resources :lessons
+  end
+
   resources :profiles
   devise_for :users, controllers: { registrations: 'users/registrations' } 
-  get 'subjects' , to: "pages#subjects"
   get 'contact' , to: "pages#contact"
   get 'portal' , to: "pages#portal"
   get 'my-profile', to: "pages#myprofile"
