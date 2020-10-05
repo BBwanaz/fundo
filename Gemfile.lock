@@ -1004,7 +1004,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    down (5.1.1)
+    down (5.2.0)
       addressable (~> 2.5)
     erubi (1.9.0)
     ffi (1.13.1)
@@ -1050,7 +1050,7 @@ GEM
     orm_adapter (0.5.0)
     petergate (2.0.1)
       activerecord (> 4.0.0)
-    public_suffix (4.0.5)
+    public_suffix (4.0.6)
     puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.3)
@@ -1103,7 +1103,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    shrine (3.2.2)
+    shrine (3.3.0)
       content_disposition (~> 1.0)
       down (~> 5.1)
     spring (2.1.0)
