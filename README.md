@@ -1,24 +1,3 @@
-# README
+# Fazh
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Web Application for students to access video tutorials in venecular. Students can create accounts and request tutors to make a video for a specific question that they are interested in. Once the video is up, every other student can access that video aswell.
