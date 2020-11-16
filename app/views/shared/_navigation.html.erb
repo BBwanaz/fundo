@@ -1,11 +1,18 @@
-<div>
-  <div><%= link_to "Home" , root_path %></div>
-  <div><%= link_to "Subjects", subjects_path %></div>
-  <div><%= link_to "Contact" , contact_path%></div>
-  <div><%= link_to "Portal", portal_path  if logged_in?(:tutor) | logged_in?(:root_admin) %> </div>
-  <div><%= link_to "Login" , new_user_session_path if !current_user %></div>
-  <div><%= link_to "Sign up" , new_user_registration_path if !current_user%></div>
-  <div><%= link_to "My Profile" , my_profile_path if current_user %></div>
-  <div><%= link_to 'Submit Question', new_query_path  if logged_in?(:student) %></div>
-  <div><%= link_to "Logout" , destroy_user_session_path, method: :delete if current_user %></div>
- </div>
+<div class="container">
+<nav class="navbar  navbar-light bg-transparent">
+ <a class="navbar-brand" href="/">FAZH</a>
+ <form class="form-inline">
+    <%= link_to "Subjects", subjects_path, :class => "nav-link" %> 
+    <%= link_to "Portal", portal_path, :class => "nav-link"   if logged_in?(:tutor) | logged_in?(:root_admin) %>
+
+    <%= link_to "My Profile" , my_profile_path, :class => "nav-link" if current_user %>
+  	<%= link_to "Contact" , contact_path, :class => "nav-link"%>
+    <%= link_to "Login" , new_user_session_path, :class => "btn btn-outline-primary"  if !current_user %>
+  <div style="padding-left: 10px;">
+      <%= link_to "Sign Up" , new_user_registration_path, :class => "btn btn-outline-success" if !current_user  %>
+      <%= link_to "Logout" , destroy_user_session_path, method: :delete, :class => "btn btn-outline-success"  if current_user %>
+  </div>
+  </form>
+  </nav>
+
+ <%= link_to "Submit Question", new_query_path  if logged_in?(:student) %>
