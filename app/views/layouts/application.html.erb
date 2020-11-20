@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fundo</title>
+    <title>Fazh</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   <%= render 'shared/navigation'%>
   </head>
-
-
-
-<%= render 'shared/navigation'%>
-
 
   <body>
     <%= yield %>
@@ -21,6 +17,7 @@
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
 
-   <%= @copyright%> 
+
+      <%= render 'shared/footer'%>
 
 </html>
